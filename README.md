@@ -1,1 +1,1 @@
-# kitboxteam project
+# Kitboxteam project
