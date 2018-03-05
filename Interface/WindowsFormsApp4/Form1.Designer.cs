@@ -46,9 +46,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Location = new System.Drawing.Point(227, 269);
+            this.button1.Location = new System.Drawing.Point(234, 264);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 56);
+            this.button1.Size = new System.Drawing.Size(199, 46);
             this.button1.TabIndex = 3;
             this.button1.Text = "Start";
             this.button1.UseVisualStyleBackColor = false;
@@ -96,6 +96,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::WindowsFormsApp4.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_16_1024x5122;
+            this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(970, 510);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

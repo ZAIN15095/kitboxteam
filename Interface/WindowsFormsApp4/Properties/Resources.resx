@@ -118,22 +118,55 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="2--2483679-Marble Grunge Texture2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Texture2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play_52px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play_52px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panneau-de-configuration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panneau-de-configuration1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x512.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Start_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x5122" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x5122.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2--2483679-Marble Grunge Texture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Texture1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2--2483679-Marble Grunge Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Octicons-tools.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Octicons-tools.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="panneau-de-configuration" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panneau-de-configuration.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="panneau-de-configuration1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panneau-de-configuration1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1425834768gris-dynamique" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1425834768gris-dynamique.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Play_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Play_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2--2483679-Marble Grunge Texture3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Texture3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1425834768gris-dynamique1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1425834768gris-dynamique1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x5121.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x512.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="F400_blanc_casse_1354733903" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\F400_blanc_casse_1354733903.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x5122" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x5122.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2--2483679-Marble Grunge Text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Text.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
