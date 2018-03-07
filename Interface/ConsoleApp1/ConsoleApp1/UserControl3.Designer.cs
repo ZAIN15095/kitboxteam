@@ -33,7 +33,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.buttonModified1 = new ConsoleApp1.ButtonModified();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -83,14 +84,33 @@
             this.textBox2.Size = new System.Drawing.Size(146, 28);
             this.textBox2.TabIndex = 13;
             // 
-            // button1
+            // label6
             // 
-            this.button1.Location = new System.Drawing.Point(343, 356);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(92, 44);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(178, 51);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(229, 39);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Identification";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // buttonModified1
+            // 
+            this.buttonModified1.BackColor = System.Drawing.Color.White;
+            this.buttonModified1.FlatAppearance.BorderColor = System.Drawing.Color.LightGray;
+            this.buttonModified1.FlatAppearance.BorderSize = 5;
+            this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.buttonModified1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(33)))), ((int)(((byte)(107)))));
+            this.buttonModified1.Location = new System.Drawing.Point(289, 346);
+            this.buttonModified1.Name = "buttonModified1";
+            this.buttonModified1.Size = new System.Drawing.Size(112, 55);
+            this.buttonModified1.TabIndex = 16;
+            this.buttonModified1.Text = "Login";
+            this.buttonModified1.UseVisualStyleBackColor = false;
+            this.buttonModified1.Click += new System.EventHandler(this.buttonModified1_Click);
             // 
             // UserControl3
             // 
@@ -98,7 +118,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.buttonModified1);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -120,6 +141,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private ButtonModified buttonModified1;
     }
 }

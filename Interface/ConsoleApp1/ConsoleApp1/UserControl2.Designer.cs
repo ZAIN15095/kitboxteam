@@ -160,9 +160,9 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::ConsoleApp1.Properties.Resources.Info_50px;
-            this.button2.Location = new System.Drawing.Point(833, 0);
+            this.button2.Location = new System.Drawing.Point(833, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 55);
+            this.button2.Size = new System.Drawing.Size(49, 52);
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -176,7 +176,7 @@
             this.button3.Image = global::ConsoleApp1.Properties.Resources.Cancel_48px;
             this.button3.Location = new System.Drawing.Point(922, 11);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 45);
+            this.button3.Size = new System.Drawing.Size(48, 44);
             this.button3.TabIndex = 20;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);

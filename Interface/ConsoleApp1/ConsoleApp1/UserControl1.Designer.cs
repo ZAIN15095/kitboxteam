@@ -28,31 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            ConsoleApp1.ButtonModified buttonModified2;
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonModified1 = new ConsoleApp1.ButtonModified();
+            buttonModified2 = new ConsoleApp1.ButtonModified();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 2;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button2.Location = new System.Drawing.Point(781, 13);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 62);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Service";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -65,24 +45,38 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Design with passion...";
             // 
-            // button1
+            // buttonModified2
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 2;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Rockwell", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.button1.Location = new System.Drawing.Point(228, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(199, 46);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            buttonModified2.BackColor = System.Drawing.Color.Transparent;
+            buttonModified2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            buttonModified2.FlatAppearance.BorderSize = 5;
+            buttonModified2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            buttonModified2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            buttonModified2.ForeColor = System.Drawing.Color.Black;
+            buttonModified2.Location = new System.Drawing.Point(784, 18);
+            buttonModified2.Name = "buttonModified2";
+            buttonModified2.Size = new System.Drawing.Size(160, 54);
+            buttonModified2.TabIndex = 12;
+            buttonModified2.Text = "Service";
+            buttonModified2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            buttonModified2.UseVisualStyleBackColor = false;
+            buttonModified2.Click += new System.EventHandler(this.buttonModified2_Click);
+            // 
+            // buttonModified1
+            // 
+            this.buttonModified1.BackColor = System.Drawing.Color.Transparent;
+            this.buttonModified1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonModified1.FlatAppearance.BorderSize = 5;
+            this.buttonModified1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonModified1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.buttonModified1.ForeColor = System.Drawing.Color.Black;
+            this.buttonModified1.Location = new System.Drawing.Point(275, 256);
+            this.buttonModified1.Name = "buttonModified1";
+            this.buttonModified1.Size = new System.Drawing.Size(152, 54);
+            this.buttonModified1.TabIndex = 11;
+            this.buttonModified1.Text = "Start";
+            this.buttonModified1.UseVisualStyleBackColor = false;
+            this.buttonModified1.Click += new System.EventHandler(this.buttonModified1_Click_1);
             // 
             // UserControl1
             // 
@@ -90,9 +84,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_16_1024x512;
-            this.Controls.Add(this.button1);
+            this.Controls.Add(buttonModified2);
+            this.Controls.Add(this.buttonModified1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(996, 512);
             this.ResumeLayout(false);
@@ -101,9 +95,7 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
+        private ButtonModified buttonModified1;
     }
 }
