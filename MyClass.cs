@@ -98,7 +98,7 @@ namespace KITBOX_project
 
 		public string  SetDimensions (Dimensions dimensions)
 		{
-			if (dimensions.Depth != 0 || dimensions.Width != 0 || dimensions.Height <= 32 )
+			if (dimensions.Depth != 0 || dimensions.Width != 0 || dimensions.Height <= 0 )
 			{
 				throw new Exception("Inapprotiate dimensions");
 			}
@@ -163,5 +163,131 @@ namespace KITBOX_project
 		}
         
     }
+
+    public class BackPanel : Item 
+    {
+        public BackPanel (string code, double price , string color) : base (code, color, price)
+        {
+            
+        }
+		public string SetDimensions(Dimensions dimensions)
+		{
+			if (dimensions.Depth <= 0 || dimensions.Width != 0 || dimensions.Height <= 0)
+			{
+				throw new Exception("Inapprotiate dimensions");
+			}
+			else
+			{
+				base.dimensions = dimensions;
+
+				return string.Format("BackPanel: {0}", dimensions.ToSting());
+
+			}
+
+		}
+    }
+
+    public class FrontCrossbar : Item
+	// comment ne pas dupliquer le code de cette class pour creer la class BckCrossbar??
+	{
+        public FrontCrossbar ( string code, double price, string color = null) : base (code, color, price)
+        {
+            
+        }
+		public string SetDimensions(Dimensions dimensions)
+		{
+			if (dimensions.Depth != 0 || dimensions.Width <= 0 || dimensions.Height != 0)
+			{
+				throw new Exception("Inapprotiate dimensions");
+			}
+			else
+			{
+				base.dimensions = dimensions;
+
+				return string.Format("Crossbar: {0}", dimensions.ToSting());
+
+			}
+
+		}
+
+    }
+
+	public class LRcrossbar : Item
+	{
+		public LRcrossbar(string code, double price, string color = null) : base(code, color, price)
+		{
+
+		}
+		public string SetDimensions(Dimensions dimensions)
+		{
+			if (dimensions.Depth <= 0 || dimensions.Width != 0 || dimensions.Height != 0)
+			{
+				throw new Exception("Inapprotiate dimensions");
+			}
+			else
+			{
+				base.dimensions = dimensions;
+
+				return string.Format("LRcrossbar: {0}", dimensions.ToSting());
+
+			}
+
+		}
+
+	}
+
+    public class Door : Item 
+    {
+        public Door (string code, double price, string color ) : base (code, color, price)
+        {
+            
+        }
+		public string SetDimensions(Dimensions dimensions)
+		{
+			if (dimensions.Depth != 0 || dimensions.Width <= 0 || dimensions.Height <= 0)
+			{
+				throw new Exception("Inapprotiate dimensions");
+			}
+			else
+			{
+				base.dimensions = dimensions;
+
+				return string.Format("Door: {0}", dimensions.ToSting());
+
+			}
+
+		}
+    }
+
+    public class AngleBar : Item 
+    {
+        public AngleBar (string code, double price, string color) : base(code, color, price)
+        {
+            
+        }
+		public string SetDimensions(Dimensions dimensions)
+		{
+			if (dimensions.Depth != 0 || dimensions.Width != 0 || dimensions.Height <= 0)
+			{
+				throw new Exception("Inapprotiate dimensions");
+			}
+			else
+			{
+				base.dimensions = dimensions;
+
+				return string.Format("AngleBar: {0}", dimensions.ToSting());
+
+			}
+
+		}
+
+    }
+
+
+
+
+
+
+
 
 }
