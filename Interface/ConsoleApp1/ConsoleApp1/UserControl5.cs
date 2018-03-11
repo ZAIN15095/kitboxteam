@@ -29,11 +29,12 @@ namespace ConsoleApp1
             
             public Color BorderColor = Color.Black;
            
-            public int BorderSize = 5;
+            public int BorderSize = 1;
+
             public ButtonModified()
             {
                 FlatStyle = FlatStyle.Flat;
-                BackColor = Color.White;
+                BackColor = Color.Transparent;
                 FlatAppearance.BorderColor = BorderColor;
                 FlatAppearance.BorderSize = BorderSize;
                 Font = new System.Drawing.Font("VAGRounded-Light",
@@ -49,14 +50,14 @@ namespace ConsoleApp1
             {
                 ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))),
                             ((int)(((byte)(33)))), ((int)(((byte)(107)))));
-                BackColor = Color.White;
+                BackColor = Color.Transparent;
             }
 
             void ButtonLastest_MouseDown(object sender, MouseEventArgs e)
             {
                 BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))),
                             ((int)(((byte)(33)))), ((int)(((byte)(107)))));
-                ForeColor = System.Drawing.Color.White;
+                ForeColor = System.Drawing.Color.Transparent;
 
             }
             int top;

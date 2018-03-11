@@ -17,24 +17,18 @@ namespace ConsoleApp1
             InitializeComponent();
         }
 
-     
-
-        private void buttonModified1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-           
+                Form2 f2 = new Form2();
+                f2.Show();
+            
         }
 
-        private void buttonModified1_Click_1(object sender, EventArgs e)
+        private void xButton1_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new UserControl2());
-        }
-
-        private void buttonModified2_Click(object sender, EventArgs e)
-        {
-            Form2 f2 = new Form2();
-            f2.Show();
         }
     }
 }
