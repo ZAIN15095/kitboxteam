@@ -21,5 +21,10 @@ namespace ConsoleApp1
         {
             this.Controls.Add(new UserControl1());
         }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

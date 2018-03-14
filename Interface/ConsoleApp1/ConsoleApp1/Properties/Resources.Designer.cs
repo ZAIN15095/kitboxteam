@@ -123,6 +123,16 @@ namespace ConsoleApp1.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cancel_48px1 {
+            get {
+                object obj = ResourceManager.GetObject("Cancel_48px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Chevron_Left_50px {
             get {
                 object obj = ResourceManager.GetObject("Chevron Left_50px", resourceCulture);

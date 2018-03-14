@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConsoleApp1.Properties;
 
 namespace ConsoleApp1
 {
@@ -46,7 +47,9 @@ namespace ConsoleApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new UserControl6());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -60,5 +63,24 @@ namespace ConsoleApp1
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.Cancel_48px1;
+        }
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Resources.Cancel_48px1;
+
+        }
+
+
+
+
     }
 }

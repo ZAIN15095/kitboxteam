@@ -44,3 +44,11 @@ E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\Consol
 E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
 E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
 E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.UserControl6.resources
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\MetroFramework.Design.dll
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\MetroFramework.dll
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\MetroFramework.Fonts.dll
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\Newtonsoft.Json.dll
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\Newtonsoft.Json.xml
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\MaterialSkin.dll
