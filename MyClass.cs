@@ -187,10 +187,10 @@ namespace KITBOX_project
 		}
     }
 
-    public class FrontCrossbar : Item
-	// comment ne pas dupliquer le code de cette class pour creer la class BckCrossbar??
+    public class FBCrossbar : Item
+	
 	{
-        public FrontCrossbar ( string code, double price, string color = null) : base (code, color, price)
+        public FBCrossbar ( string code, double price, string color = null) : base (code, color, price)
         {
             
         }
@@ -204,7 +204,7 @@ namespace KITBOX_project
 			{
 				base.dimensions = dimensions;
 
-				return string.Format("Crossbar: {0}", dimensions.ToSting());
+				return string.Format("FBCrossbar: {0}", dimensions.ToSting());
 
 			}
 
@@ -283,11 +283,89 @@ namespace KITBOX_project
 
     }
 
+    public class Rack 
+    {
+        private Battens battens;
+        private LRpanel lrpanel;
+        private UDpanel udpanel;
+        private BackPanel backpanel;
+        private FBCrossbar fbcrossbar;
+        private LRcrossbar lrcrossbar;
+        private AngleBar anglebar;
+        private Door door;
 
+        public Rack (Battens battens, LRpanel lrpanel, UDpanel udpanel, BackPanel backpanel,
+                    FBCrossbar fbcrossbar, LRcrossbar lrcrossbar, AngleBar anglebar, Door door = null )
+        {
+            this.battens = battens;
+            this.lrpanel = lrpanel;
+            this.udpanel = udpanel;
+            this.backpanel = backpanel;
+            this.fbcrossbar = fbcrossbar;
+            this.lrcrossbar = lrcrossbar;
+            this.anglebar = anglebar;
+            this.door = door;
+        }
 
+        public Battens BAttens
+        {
+            get { return battens; }
+            set { battens = value; }
+            
+        }
+        public LRpanel Lrpanel
+        {
+			get { return lrpanel; }
+			set { lrpanel = value; }
+            
+        }
+		public UDpanel Udpanel
+		{
+			get { return udpanel; }
+			set { udpanel = value; }
 
+		}
+		public BackPanel Backpanel
+		{
+			get { return backpanel; }
+			set { backpanel = value; }
 
+		}
+        public FBCrossbar Fbcrossbar
+		{
+			get { return fbcrossbar; }
+			set { fbcrossbar = value; }
 
+		}
+		public LRcrossbar Lrcrossbar
+		{
+			get { return lrcrossbar; }
+			set { lrcrossbar = value; }
 
+		}
+		public AngleBar Anglebar
+		{
+			get { return anglebar; }
+			set { anglebar = value; }
+
+		}
+		public Door Door
+		{
+			get { return door; }
+			set { door = value; }
+
+		}
+    
+        public string ToString ()
+
+        {
+            return String.Format("\n {0} x4\n {1} x2\n {2} \n {3}\n {4}\n {5}\n {6}\n {7} \n", battens,lrpanel,
+                                udpanel, backpanel,fbcrossbar, lrcrossbar,anglebar,door ); 
+        }
+        public double GetPrice()
+        {
+            return 0;
+        }
+    }
 
 }
