@@ -37,10 +37,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.Button1 = new ManiXButton.XButton();
             this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label3
@@ -81,6 +79,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(69, 69);
             this.pictureBox2.TabIndex = 12;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // textBox2
             // 
@@ -149,23 +148,12 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::ConsoleApp1.Properties.Resources.Cancel_48px1;
-            this.pictureBox3.Location = new System.Drawing.Point(567, 227);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(48, 48);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox3.TabIndex = 22;
-            this.pictureBox3.TabStop = false;
-            // 
             // UserControl3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.Button1);
             this.Controls.Add(this.label6);
@@ -178,7 +166,6 @@
             this.Size = new System.Drawing.Size(795, 491);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -194,6 +181,5 @@
         private System.Windows.Forms.Label label6;
         private ManiXButton.XButton Button1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

@@ -71,11 +71,11 @@ namespace ConsoleApp1
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            pictureBox1.Image = Resources.Cancel_48px1;
+            
         }
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            pictureBox1.Image = Resources.Cancel_48px1;
+            
 
         }
 

@@ -61,19 +61,16 @@ namespace ConsoleApp1
                     conn.Parameters.AddWithValue("@user", textBox1.Text);
                     conn.Parameters.AddWithValue("@pw", textBox2.Text);
                     SqlDataReader Dr = conn.ExecuteReader();
-                    if (Dr.HasRows == true)
-                    {
-                        MessageBox.Show("Corrected");
 
-                    }
-                    else
-                    {
+                    Form4 f4 = new Form4();
+                    f4.Show();
+                    Form2 f2 = new Form2();
+                    f2.Close();
 
-                        MessageBox.Show("false");
-                    }
-                }
 
-                catch (Exception ex)
+            }
+
+            catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
@@ -84,6 +81,11 @@ namespace ConsoleApp1
         }
 
         private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
         {
 
         }

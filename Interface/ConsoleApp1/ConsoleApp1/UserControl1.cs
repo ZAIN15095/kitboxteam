@@ -21,7 +21,10 @@ namespace ConsoleApp1
         {
                 Form2 f2 = new Form2();
                 f2.Show();
-            
+                Form1 f1 = new Form1();
+                f1.Close();
+
+
         }
 
         private void xButton1_Click(object sender, EventArgs e)

@@ -52,3 +52,7 @@ E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\Newton
 E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\Newtonsoft.Json.xml
 E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CopyComplete
 E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\MaterialSkin.dll
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.Form3.resources
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\Dapper.dll
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\bin\Debug\Dapper.xml
+E:\DOCUMENT\GitHub\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.Form4.resources
