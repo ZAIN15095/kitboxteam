@@ -18,13 +18,9 @@ namespace ConsoleApp1
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(helper.cnnVal("kitDB")))
 
                 {
-
-
                     var liste = connection.Query<Item>("dbo.LISTE @Code", new { Code = code }).ToList();
                     return liste;
-               
-                
-
+                    
                 }
         }
 
@@ -36,7 +32,7 @@ namespace ConsoleApp1
             using (IDbConnection connection = new System.Data.SqlClient.SqlConnection(helper.cnnVal("kitDB")))
 
             {
-                var rowsAffected = connection.Execute($"UPDATE [kitbox] SET [Couleur] = @Couleur WHERE Code ='{ourItem.Code}'", ourItem);
+                var rowsAffected = connection.Execute($"UPDATE [kitbox] SET [Couleur] = '{ourItem.Couleur}' WHERE Code ='{ourItem.Code}'", ourItem);
 
                 if (rowsAffected > 0)
                 {

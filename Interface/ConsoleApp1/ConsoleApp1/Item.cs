@@ -23,6 +23,18 @@ namespace ConsoleApp1
         public string Prix_Client { get; set; }
 
 
+        public string Info
+        {
+            get
+            {
+                return $"{hauteur},{Couleur},{Code}";
+
+
+
+            }
+        }
+
+
 
 
 

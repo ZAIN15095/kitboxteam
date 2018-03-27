@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Find = new System.Windows.Forms.ListBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,13 +37,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.find1 = new System.Windows.Forms.ListBox();
             this.find2 = new System.Windows.Forms.ListBox();
             this.find3 = new System.Windows.Forms.ListBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // Find
@@ -155,6 +152,7 @@
             this.find3.Name = "find3";
             this.find3.Size = new System.Drawing.Size(40, 26);
             this.find3.TabIndex = 16;
+            this.find3.SelectedIndexChanged += new System.EventHandler(this.find3_SelectedIndexChanged);
             // 
             // textBox3
             // 
@@ -162,6 +160,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 17;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged_1);
             // 
             // textBox4
             // 
@@ -174,6 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
             this.ClientSize = new System.Drawing.Size(1010, 601);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -191,7 +191,6 @@
             this.Controls.Add(this.Find);
             this.Name = "Form3";
             this.Load += new System.EventHandler(this.Form3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +207,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.ListBox find1;
         private System.Windows.Forms.ListBox find2;
         private System.Windows.Forms.ListBox find3;

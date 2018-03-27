@@ -39,7 +39,7 @@ namespace ConsoleApp1
             items= db.GetItems(textBox1.Text);
             Find.Refresh();
             Find.DataSource  = items;
-            Find.DisplayMember = "Enstock";
+            Find.DisplayMember = "Info";
             find1.DataSource = items;
             find1.DisplayMember = "Enstock";
             find2.DataSource = items;
@@ -92,6 +92,16 @@ namespace ConsoleApp1
         }
 
         private void find2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void find3_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
