@@ -79,8 +79,14 @@ namespace ConsoleApp1
 
         }
 
+        private void UserControl2_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }

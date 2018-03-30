@@ -47,7 +47,7 @@
             // Find
             // 
             this.Find.FormattingEnabled = true;
-            this.Find.Location = new System.Drawing.Point(674, 220);
+            this.Find.Location = new System.Drawing.Point(70, 184);
             this.Find.Name = "Find";
             this.Find.Size = new System.Drawing.Size(294, 290);
             this.Find.TabIndex = 0;
@@ -55,7 +55,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(790, 115);
+            this.textBox1.Location = new System.Drawing.Point(145, 112);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(134, 20);
             this.textBox1.TabIndex = 1;
@@ -64,7 +64,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(686, 122);
+            this.label2.Location = new System.Drawing.Point(67, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(834, 167);
+            this.button1.Location = new System.Drawing.Point(363, 109);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -83,7 +83,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 285);
+            this.label3.Location = new System.Drawing.Point(686, 276);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 13);
             this.label3.TabIndex = 8;
@@ -92,7 +92,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(47, 192);
+            this.label4.Location = new System.Drawing.Point(686, 184);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 9;
@@ -100,7 +100,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(142, 497);
+            this.button2.Location = new System.Drawing.Point(781, 489);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 11;
@@ -111,7 +111,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 388);
+            this.label5.Location = new System.Drawing.Point(686, 357);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 12;
@@ -119,7 +119,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(180, 189);
+            this.textBox2.Location = new System.Drawing.Point(838, 184);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 13;
@@ -129,7 +129,7 @@
             // 
             this.find1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.find1.FormattingEnabled = true;
-            this.find1.Location = new System.Drawing.Point(91, 192);
+            this.find1.Location = new System.Drawing.Point(759, 184);
             this.find1.Name = "find1";
             this.find1.Size = new System.Drawing.Size(73, 26);
             this.find1.TabIndex = 14;
@@ -138,7 +138,7 @@
             // 
             this.find2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.find2.FormattingEnabled = true;
-            this.find2.Location = new System.Drawing.Point(91, 285);
+            this.find2.Location = new System.Drawing.Point(759, 276);
             this.find2.Name = "find2";
             this.find2.Size = new System.Drawing.Size(116, 26);
             this.find2.TabIndex = 15;
@@ -148,7 +148,7 @@
             // 
             this.find3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.find3.FormattingEnabled = true;
-            this.find3.Location = new System.Drawing.Point(104, 388);
+            this.find3.Location = new System.Drawing.Point(759, 351);
             this.find3.Name = "find3";
             this.find3.Size = new System.Drawing.Size(40, 26);
             this.find3.TabIndex = 16;
@@ -156,7 +156,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(180, 381);
+            this.textBox3.Location = new System.Drawing.Point(838, 357);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 17;
@@ -164,7 +164,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(180, 285);
+            this.textBox4.Location = new System.Drawing.Point(838, 276);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 18;

@@ -39,7 +39,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
@@ -128,6 +127,7 @@
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(143, 31);
             this.comboBox4.TabIndex = 16;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // comboBox1
             // 
@@ -180,19 +180,6 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Maroon;
-            this.label4.Location = new System.Drawing.Point(549, 329);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 23);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "Depth";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
             // comboBox3
             // 
             this.comboBox3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -212,7 +199,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
             this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
@@ -226,6 +212,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl2";
             this.Size = new System.Drawing.Size(996, 512);
+            this.Load += new System.EventHandler(this.UserControl2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,7 +230,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox3;
     }
 }
