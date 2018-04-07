@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ConsoleApp1.Properties;
 
 namespace ConsoleApp1
 {
@@ -46,7 +47,9 @@ namespace ConsoleApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new UserControl6());
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -57,6 +60,31 @@ namespace ConsoleApp1
         }
 
         private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictureBox1_MouseHover(object sender, EventArgs e)
+        {
+            
+        }
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void UserControl2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

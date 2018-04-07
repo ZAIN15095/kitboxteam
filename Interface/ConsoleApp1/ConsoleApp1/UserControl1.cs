@@ -19,15 +19,19 @@ namespace ConsoleApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+                Form2 f2 = new Form2();
+                f2.Show();
+                Form1 f1 = new Form1();
+                f1.Close();
+
+
+        }
+
+        private void xButton1_Click(object sender, EventArgs e)
+        {
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new UserControl2());
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form2 f2 = new Form2();
-            f2.ShowDialog();
         }
     }
 }
