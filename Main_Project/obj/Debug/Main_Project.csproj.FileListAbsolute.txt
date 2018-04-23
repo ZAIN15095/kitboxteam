@@ -6,10 +6,3 @@
 /Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.csproj.CoreCompileInputs.cache
 /Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.exe
 /Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.pdb
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/bin/Debug/Main_Project.exe
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/bin/Debug/Main_Project.pdb
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/bin/Debug/KITBOX_project.pdb
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/obj/Debug/Main_Project.csprojResolveAssemblyReference.cache
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/obj/Debug/Main_Project.csproj.CoreCompileInputs.cache
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/obj/Debug/Main_Project.exe
-/Users/sonoflight/Projects/KITBOX_project/kitboxteam/Main_Project/obj/Debug/Main_Project.pdb
