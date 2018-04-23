@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace ConsoleApp1
 {
@@ -22,7 +16,7 @@ namespace ConsoleApp1
            
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label_Firstname(object sender, EventArgs e)
         {
 
         }
@@ -33,27 +27,27 @@ namespace ConsoleApp1
             textBox1.Text = textBox2.Text = textBox3.Text = textBox4.Text = "";
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void textBox_Firstname(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void textBox_Lastname(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
+        private void textBox_Gsm(object sender, EventArgs e)
         {
 
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void textBox_Adress(object sender, EventArgs e)
         {
 
         }
 
-        private void xButton1_Click(object sender, EventArgs e)
+        private void xButton_Submit(object sender, EventArgs e)
         {
             try
             {
@@ -80,6 +74,31 @@ namespace ConsoleApp1
             
 
          
+        }
+
+        private void UserControl6_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Lastname(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Gsm(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Adress(object sender, EventArgs e)
+        {
+
+        }
+
+        private void xButton_Cancel(object sender, EventArgs e)
+        {
+
         }
     }
 }

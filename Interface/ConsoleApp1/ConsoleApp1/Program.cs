@@ -11,8 +11,7 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            Application.Run(new Form1());
-            
+            Application.Run(new Form1());    
         }
     }
 }

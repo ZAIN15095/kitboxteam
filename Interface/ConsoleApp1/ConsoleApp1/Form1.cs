@@ -19,7 +19,7 @@ namespace ConsoleApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.Controls.Add(new UserControl1());
+            this.Controls.Add(new Home());
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)

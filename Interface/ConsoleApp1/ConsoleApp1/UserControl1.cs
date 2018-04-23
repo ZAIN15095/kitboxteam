@@ -10,14 +10,15 @@ using System.Windows.Forms;
 
 namespace ConsoleApp1
 {
-    public partial class UserControl1 : UserControl
+    public partial class Home : UserControl
     {
-        public UserControl1()
+        public Home()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Service for the storekeeper
+        private void Service(object sender, EventArgs e)
         {
                 Form2 f2 = new Form2();
                 f2.Show();
@@ -27,7 +28,8 @@ namespace ConsoleApp1
 
         }
 
-        private void xButton1_Click(object sender, EventArgs e)
+        //begin the order
+        private void StartApp(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();

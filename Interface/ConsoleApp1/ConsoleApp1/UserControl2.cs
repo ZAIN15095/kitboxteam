@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using KITBOX_project;
 using System.Windows.Forms;
-using ConsoleApp1.Properties;
 
 namespace ConsoleApp1
 {
@@ -18,7 +11,7 @@ namespace ConsoleApp1
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label_Width(object sender, EventArgs e)
         {
 
         }
@@ -28,16 +21,16 @@ namespace ConsoleApp1
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void button_Help(object sender, EventArgs e)
         {
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button2_Back(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
-            this.Controls.Add(new UserControl1());
+            this.Controls.Add(new Home());
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -52,14 +45,14 @@ namespace ConsoleApp1
             this.Controls.Add(new UserControl6());
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void button_Back(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
-            this.Controls.Add(new UserControl1());
+            this.Controls.Add(new Home());
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void Label_Next(object sender, EventArgs e)
         {
 
         }
@@ -75,7 +68,6 @@ namespace ConsoleApp1
         }
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            
 
         }
 
@@ -84,7 +76,29 @@ namespace ConsoleApp1
 
         }
 
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBox_Width(object sender, EventArgs e)
+        {
+            int width = Convert.ToInt32(this.width);
+            int depth = Convert.ToInt32(this.depth);
+            Dimensions UDpanel_dim = new Dimensions(0, width, depth);
+            Dimensions LRpanel_dim = new Dimensions(0, 0, depth);
+            Dimensions Battens_dim = new Dimensions(0, 0, 0);
+            Dimensions Backpannel_dim = new Dimensions(0, width, 0);
+            Dimensions FBcrossbar_dim = new Dimensions(0, width, 0);
+            Dimensions LRcrossbar_dim = new Dimensions(0, 0, depth);
+        }
+
+        private void label_Dimensions(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_Depth(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox_Depth(object sender, EventArgs e)
         {
 
         }

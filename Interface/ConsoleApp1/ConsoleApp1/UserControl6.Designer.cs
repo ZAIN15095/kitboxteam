@@ -49,7 +49,7 @@
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "FIRST NAME";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.label_Firstname);
             // 
             // label2
             // 
@@ -59,15 +59,18 @@
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "LAST NAME";
+            this.label2.Click += new System.EventHandler(this.label_Lastname);
             // 
             // label3
             // 
+            this.label3.AccessibleName = "";
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(345, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(58, 13);
+            this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
-            this.label3.Text = "CONTACT";
+            this.label3.Text = "GSM";
+            this.label3.Click += new System.EventHandler(this.label_Gsm);
             // 
             // label4
             // 
@@ -77,6 +80,7 @@
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "ADRESS";
+            this.label4.Click += new System.EventHandler(this.label_Adress);
             // 
             // textBox1
             // 
@@ -84,7 +88,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox_Firstname);
             // 
             // textBox2
             // 
@@ -92,7 +96,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox_Lastname);
             // 
             // textBox3
             // 
@@ -100,7 +104,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 6;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox_Gsm);
             // 
             // textBox4
             // 
@@ -108,7 +112,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 7;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox_Adress);
             // 
             // xButton2
             // 
@@ -137,6 +141,7 @@
             this.xButton2.Text = "Cancel";
             this.xButton2.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.xButton2.UseVisualStyleBackColor = true;
+            this.xButton2.Click += new System.EventHandler(this.xButton_Cancel);
             // 
             // xButton1
             // 
@@ -148,7 +153,7 @@
             this.xButton1.Text = "Submit";
             this.xButton1.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.xButton1.UseVisualStyleBackColor = true;
-            this.xButton1.Click += new System.EventHandler(this.xButton1_Click);
+            this.xButton1.Click += new System.EventHandler(this.xButton_Submit);
             // 
             // UserControl6
             // 
@@ -167,6 +172,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UserControl6";
             this.Size = new System.Drawing.Size(996, 512);
+            this.Load += new System.EventHandler(this.UserControl6_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

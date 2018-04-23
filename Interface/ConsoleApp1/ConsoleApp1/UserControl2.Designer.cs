@@ -32,14 +32,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.width = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.depth = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -48,12 +46,12 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(549, 123);
+            this.label1.Location = new System.Drawing.Point(549, 171);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "Width";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Click += new System.EventHandler(this.label_Width);
             // 
             // button1
             // 
@@ -76,9 +74,10 @@
             this.label3.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(586, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 39);
+            this.label3.Size = new System.Drawing.Size(234, 39);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Dimensions";
+            this.label3.Text = "Cabinet base";
+            this.label3.Click += new System.EventHandler(this.label_Dimensions);
             // 
             // label6
             // 
@@ -90,18 +89,7 @@
             this.label6.Size = new System.Drawing.Size(250, 39);
             this.label6.TabIndex = 12;
             this.label6.Text = " Configuration";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(586, 261);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 39);
-            this.label7.TabIndex = 13;
-            this.label7.Text = "Color";
+            this.label6.Click += new System.EventHandler(this.Label_Next);
             // 
             // label2
             // 
@@ -109,34 +97,27 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(549, 191);
+            this.label2.Location = new System.Drawing.Point(549, 257);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Depth";
+            this.label2.Click += new System.EventHandler(this.label_Depth);
             // 
-            // comboBox4
+            // width
             // 
-            this.comboBox4.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Items.AddRange(new object[] {
+            this.width.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.width.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.width.FormattingEnabled = true;
+            this.width.Items.AddRange(new object[] {
             "42",
             "53",
             "45"});
-            this.comboBox4.Location = new System.Drawing.Point(648, 113);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(143, 31);
-            this.comboBox4.TabIndex = 16;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(648, 319);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(143, 33);
-            this.comboBox1.TabIndex = 17;
+            this.width.Location = new System.Drawing.Point(648, 168);
+            this.width.Name = "width";
+            this.width.Size = new System.Drawing.Size(143, 31);
+            this.width.TabIndex = 16;
+            this.width.SelectedIndexChanged += new System.EventHandler(this.comboBox_Width);
             // 
             // button4
             // 
@@ -150,7 +131,7 @@
             this.button4.Size = new System.Drawing.Size(34, 47);
             this.button4.TabIndex = 18;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.button4.Click += new System.EventHandler(this.button2_Back);
             // 
             // button2
             // 
@@ -164,7 +145,7 @@
             this.button2.Size = new System.Drawing.Size(49, 48);
             this.button2.TabIndex = 19;
             this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.button_Help);
             // 
             // button3
             // 
@@ -178,34 +159,34 @@
             this.button3.Size = new System.Drawing.Size(48, 44);
             this.button3.TabIndex = 20;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.button3.Click += new System.EventHandler(this.button_Back);
             // 
-            // comboBox3
+            // depth
             // 
-            this.comboBox3.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.depth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.depth.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depth.FormattingEnabled = true;
+            this.depth.Items.AddRange(new object[] {
             "42",
             "53",
             "45"});
-            this.comboBox3.Location = new System.Drawing.Point(648, 188);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(143, 31);
-            this.comboBox3.TabIndex = 22;
+            this.depth.Location = new System.Drawing.Point(648, 257);
+            this.depth.Name = "depth";
+            this.depth.Size = new System.Drawing.Size(143, 31);
+            this.depth.TabIndex = 23;
+            this.depth.SelectedIndexChanged += new System.EventHandler(this.comboBox_Depth);
             // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
-            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.depth);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.comboBox4);
+            this.Controls.Add(this.width);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
@@ -223,13 +204,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox width;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox depth;
     }
 }

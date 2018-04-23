@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp1
 {
-    partial class UserControl1
+    partial class Home
     {
         /// <summary> 
         /// Required designer variable.
@@ -77,7 +77,7 @@
             this.xButton1.Text = "Start";
             this.xButton1.Theme = ManiXButton.Theme.MSOffice2010_Green;
             this.xButton1.UseVisualStyleBackColor = false;
-            this.xButton1.Click += new System.EventHandler(this.xButton1_Click);
+            this.xButton1.Click += new System.EventHandler(this.StartApp);
             // 
             // button1
             // 
@@ -94,7 +94,7 @@
             this.button1.Text = "Service";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.Click += new System.EventHandler(this.Service);
             // 
             // UserControl1
             // 
