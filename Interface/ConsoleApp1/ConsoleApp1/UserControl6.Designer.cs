@@ -37,14 +37,14 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
-            this.xButton2 = new ManiXButton.XButton();
             this.xButton1 = new ManiXButton.XButton();
+            this.xButton2 = new ManiXButton.XButton();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(345, 148);
+            this.label1.Location = new System.Drawing.Point(766, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 0;
@@ -54,7 +54,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(345, 196);
+            this.label2.Location = new System.Drawing.Point(766, 173);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 13);
             this.label2.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             this.label3.AccessibleName = "";
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(345, 243);
+            this.label3.Location = new System.Drawing.Point(782, 223);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(31, 13);
             this.label3.TabIndex = 2;
@@ -75,7 +75,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(345, 293);
+            this.label4.Location = new System.Drawing.Point(783, 289);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 13);
             this.label4.TabIndex = 3;
@@ -84,7 +84,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(448, 148);
+            this.textBox1.Location = new System.Drawing.Point(893, 105);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 20);
             this.textBox1.TabIndex = 4;
@@ -92,7 +92,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(448, 196);
+            this.textBox2.Location = new System.Drawing.Point(893, 170);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(100, 20);
             this.textBox2.TabIndex = 5;
@@ -100,7 +100,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(448, 243);
+            this.textBox3.Location = new System.Drawing.Point(896, 220);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(100, 20);
             this.textBox3.TabIndex = 6;
@@ -108,13 +108,13 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(448, 286);
+            this.textBox4.Location = new System.Drawing.Point(896, 286);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 7;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox_Adress);
             // 
-            // xButton2
+            // xButton1
             // 
             office2010Blue1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
             office2010Blue1.BorderColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(135)))), ((int)(((byte)(228)))));
@@ -133,18 +133,6 @@
             office2010Blue1.HoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Blue1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Blue1.TextColor = System.Drawing.Color.White;
-            this.xButton2.ColorTable = office2010Blue1;
-            this.xButton2.Location = new System.Drawing.Point(612, 378);
-            this.xButton2.Name = "xButton2";
-            this.xButton2.Size = new System.Drawing.Size(85, 30);
-            this.xButton2.TabIndex = 10;
-            this.xButton2.Text = "Cancel";
-            this.xButton2.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
-            this.xButton2.UseVisualStyleBackColor = true;
-            this.xButton2.Click += new System.EventHandler(this.xButton_Cancel);
-            // 
-            // xButton1
-            // 
             this.xButton1.ColorTable = office2010Blue1;
             this.xButton1.Location = new System.Drawing.Point(484, 378);
             this.xButton1.Name = "xButton1";
@@ -155,11 +143,23 @@
             this.xButton1.UseVisualStyleBackColor = true;
             this.xButton1.Click += new System.EventHandler(this.xButton_Submit);
             // 
+            // xButton2
+            // 
+            this.xButton2.ColorTable = office2010Blue1;
+            this.xButton2.Location = new System.Drawing.Point(612, 378);
+            this.xButton2.Name = "xButton2";
+            this.xButton2.Size = new System.Drawing.Size(85, 30);
+            this.xButton2.TabIndex = 10;
+            this.xButton2.Text = "Cancel";
+            this.xButton2.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
+            this.xButton2.UseVisualStyleBackColor = true;
+            this.xButton2.Click += new System.EventHandler(this.xButton_Cancel);
+            // 
             // UserControl6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
+            this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
             this.Controls.Add(this.xButton2);
             this.Controls.Add(this.xButton1);
             this.Controls.Add(this.textBox4);

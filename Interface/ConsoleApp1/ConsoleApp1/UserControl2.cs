@@ -38,11 +38,11 @@ namespace ConsoleApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Button_Next(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
-            this.Controls.Add(new UserControl6());
+            this.Controls.Add(new InterfaceCasier1());
         }
 
         private void button_Back(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace ConsoleApp1
 
         private void pictureBox1_MouseHover(object sender, EventArgs e)
         {
-            
+           
         }
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {

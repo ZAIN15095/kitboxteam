@@ -95,6 +95,48 @@
     </Compile>
     <Compile Include="helper.cs" />
     <Compile Include="IITEM.cs" />
+    <Compile Include="InterfaceCasier1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier1.Designer.cs">
+      <DependentUpon>InterfaceCasier1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceCasier2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier2.Designer.cs">
+      <DependentUpon>InterfaceCasier2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceCasier3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier3.Designer.cs">
+      <DependentUpon>InterfaceCasier3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceCasier4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier4.Designer.cs">
+      <DependentUpon>InterfaceCasier4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceCasier5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier5.Designer.cs">
+      <DependentUpon>InterfaceCasier5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceCasier6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier6.Designer.cs">
+      <DependentUpon>InterfaceCasier6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceCasier7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCasier7.Designer.cs">
+      <DependentUpon>InterfaceCasier7.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
@@ -153,6 +195,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier1.resx">
+      <DependentUpon>InterfaceCasier1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier2.resx">
+      <DependentUpon>InterfaceCasier2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier3.resx">
+      <DependentUpon>InterfaceCasier3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier4.resx">
+      <DependentUpon>InterfaceCasier4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier5.resx">
+      <DependentUpon>InterfaceCasier5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier6.resx">
+      <DependentUpon>InterfaceCasier6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCasier7.resx">
+      <DependentUpon>InterfaceCasier7.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
