@@ -26,7 +26,7 @@ namespace ConsoleApp1
 
         }
 
-        private void button2_Back(object sender, EventArgs e)
+        private void BackButton_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
@@ -38,14 +38,14 @@ namespace ConsoleApp1
 
         }
 
-        private void Button_Next(object sender, EventArgs e)
+        private void NextButton_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new InterfaceCasier1());
         }
 
-        private void button_Back(object sender, EventArgs e)
+        private void EndButton_Click(object sender, EventArgs e)
         {
             this.BackgroundImage = null;
             this.Controls.Clear();
@@ -78,14 +78,7 @@ namespace ConsoleApp1
 
         private void comboBox_Width(object sender, EventArgs e)
         {
-            int width = Convert.ToInt32(this.width);
-            int depth = Convert.ToInt32(this.depth);
-            Dimensions UDpanel_dim = new Dimensions(0, width, depth);
-            Dimensions LRpanel_dim = new Dimensions(0, 0, depth);
-            Dimensions Battens_dim = new Dimensions(0, 0, 0);
-            Dimensions Backpannel_dim = new Dimensions(0, width, 0);
-            Dimensions FBcrossbar_dim = new Dimensions(0, width, 0);
-            Dimensions LRcrossbar_dim = new Dimensions(0, 0, depth);
+            
         }
 
         private void label_Dimensions(object sender, EventArgs e)

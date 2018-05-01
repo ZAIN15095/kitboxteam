@@ -58,6 +58,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -67,7 +68,7 @@
             this.button1.Size = new System.Drawing.Size(36, 47);
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.Button_Next);
+            this.button1.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // label3
             // 
@@ -108,6 +109,7 @@
             // 
             // width
             // 
+            this.width.Cursor = System.Windows.Forms.Cursors.Hand;
             this.width.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.width.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.width.FormattingEnabled = true;
@@ -124,6 +126,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -133,7 +136,7 @@
             this.button4.Size = new System.Drawing.Size(61, 47);
             this.button4.TabIndex = 18;
             this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button2_Back);
+            this.button4.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // button2
             // 
@@ -161,10 +164,11 @@
             this.button3.Size = new System.Drawing.Size(48, 44);
             this.button3.TabIndex = 20;
             this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button_Back);
+            this.button3.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // depth
             // 
+            this.depth.Cursor = System.Windows.Forms.Cursors.Hand;
             this.depth.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.depth.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.depth.FormattingEnabled = true;

@@ -42,7 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.NextButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Submit = new ManiXButton.XButton();
             this.SuspendLayout();
@@ -133,6 +133,7 @@
             this.button3.Size = new System.Drawing.Size(48, 44);
             this.button3.TabIndex = 49;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // button2
             // 
@@ -211,20 +212,20 @@
             this.label3.TabIndex = 43;
             this.label3.Text = "Rack 1";
             // 
-            // button1
+            // NextButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::ConsoleApp1.Properties.Resources.Chevron_Right_50px;
-            this.button1.Location = new System.Drawing.Point(935, 440);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 47);
-            this.button1.TabIndex = 42;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.NextButton_Click);
+            this.NextButton.BackColor = System.Drawing.Color.Transparent;
+            this.NextButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.NextButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.NextButton.FlatAppearance.BorderSize = 0;
+            this.NextButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextButton.Image = global::ConsoleApp1.Properties.Resources.Chevron_Right_50px;
+            this.NextButton.Location = new System.Drawing.Point(935, 440);
+            this.NextButton.Name = "NextButton";
+            this.NextButton.Size = new System.Drawing.Size(38, 47);
+            this.NextButton.TabIndex = 42;
+            this.NextButton.UseVisualStyleBackColor = false;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // label1
             // 
@@ -285,7 +286,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.NextButton);
             this.Controls.Add(this.label1);
             this.Name = "InterfaceCasier1";
             this.Size = new System.Drawing.Size(1036, 510);
@@ -309,7 +310,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Label label1;
         private ManiXButton.XButton Submit;
     }

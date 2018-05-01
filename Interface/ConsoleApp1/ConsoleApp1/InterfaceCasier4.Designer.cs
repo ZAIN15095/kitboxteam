@@ -50,7 +50,7 @@
             // DoorSelect
             // 
             this.DoorSelect.AutoSize = true;
-            this.DoorSelect.Location = new System.Drawing.Point(794, 308);
+            this.DoorSelect.Location = new System.Drawing.Point(752, 307);
             this.DoorSelect.Name = "DoorSelect";
             this.DoorSelect.Size = new System.Drawing.Size(15, 14);
             this.DoorSelect.TabIndex = 70;
@@ -62,7 +62,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Maroon;
-            this.label7.Location = new System.Drawing.Point(662, 301);
+            this.label7.Location = new System.Drawing.Point(620, 300);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(113, 23);
             this.label7.TabIndex = 69;
@@ -80,7 +80,7 @@
             "Galvanisé",
             "Noir",
             "Verre"});
-            this.DoorColorText.Location = new System.Drawing.Point(815, 293);
+            this.DoorColorText.Location = new System.Drawing.Point(773, 292);
             this.DoorColorText.Name = "DoorColorText";
             this.DoorColorText.Size = new System.Drawing.Size(143, 31);
             this.DoorColorText.TabIndex = 68;
@@ -90,7 +90,7 @@
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(891, 460);
+            this.label5.Location = new System.Drawing.Point(849, 459);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 39);
             this.label5.TabIndex = 67;
@@ -101,7 +101,7 @@
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(657, 460);
+            this.label4.Location = new System.Drawing.Point(615, 459);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 39);
             this.label4.TabIndex = 66;
@@ -116,7 +116,7 @@
             this.PanelColorText.Items.AddRange(new object[] {
             "Blanc",
             "Brun"});
-            this.PanelColorText.Location = new System.Drawing.Point(815, 218);
+            this.PanelColorText.Location = new System.Drawing.Point(773, 217);
             this.PanelColorText.Name = "PanelColorText";
             this.PanelColorText.Size = new System.Drawing.Size(143, 31);
             this.PanelColorText.TabIndex = 65;
@@ -131,7 +131,7 @@
             "32",
             "42",
             "52"});
-            this.HeigthText.Location = new System.Drawing.Point(815, 149);
+            this.HeigthText.Location = new System.Drawing.Point(773, 148);
             this.HeigthText.Name = "HeigthText";
             this.HeigthText.Size = new System.Drawing.Size(143, 31);
             this.HeigthText.TabIndex = 61;
@@ -142,7 +142,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Maroon;
-            this.label2.Location = new System.Drawing.Point(683, 226);
+            this.label2.Location = new System.Drawing.Point(641, 225);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(118, 23);
             this.label2.TabIndex = 60;
@@ -153,7 +153,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(524, 10);
+            this.label6.Location = new System.Drawing.Point(482, 9);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(250, 39);
             this.label6.TabIndex = 59;
@@ -164,7 +164,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(813, 89);
+            this.label3.Location = new System.Drawing.Point(771, 88);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(123, 39);
             this.label3.TabIndex = 58;
@@ -176,7 +176,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Maroon;
-            this.label1.Location = new System.Drawing.Point(706, 157);
+            this.label1.Location = new System.Drawing.Point(664, 156);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 23);
             this.label1.TabIndex = 56;
@@ -189,11 +189,12 @@
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::ConsoleApp1.Properties.Resources.Cancel_48px;
-            this.button3.Location = new System.Drawing.Point(966, 14);
+            this.button3.Location = new System.Drawing.Point(924, 13);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(48, 44);
             this.button3.TabIndex = 64;
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // button2
             // 
@@ -202,7 +203,7 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::ConsoleApp1.Properties.Resources.Info_50px;
-            this.button2.Location = new System.Drawing.Point(859, 9);
+            this.button2.Location = new System.Drawing.Point(817, 8);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(49, 48);
             this.button2.TabIndex = 63;
@@ -216,11 +217,12 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::ConsoleApp1.Properties.Resources.Chevron_Left_50px;
-            this.button4.Location = new System.Drawing.Point(617, 452);
+            this.button4.Location = new System.Drawing.Point(575, 451);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(34, 47);
             this.button4.TabIndex = 62;
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // button1
             // 
@@ -230,11 +232,12 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::ConsoleApp1.Properties.Resources.Chevron_Right_50px;
-            this.button1.Location = new System.Drawing.Point(976, 452);
+            this.button1.Location = new System.Drawing.Point(934, 451);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(38, 47);
             this.button1.TabIndex = 57;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // Submit
             // 
@@ -256,7 +259,7 @@
             office2010Blue1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Blue1.TextColor = System.Drawing.Color.White;
             this.Submit.ColorTable = office2010Blue1;
-            this.Submit.Location = new System.Drawing.Point(780, 456);
+            this.Submit.Location = new System.Drawing.Point(738, 455);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(85, 38);
             this.Submit.TabIndex = 72;

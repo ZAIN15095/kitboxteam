@@ -16,5 +16,28 @@ namespace ConsoleApp1
         {
             InitializeComponent();
         }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfaceCasier7());
+
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfaceCasier5());
+
+        }
+
+        private void EndButton_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new Home());
+        }
     }
 }

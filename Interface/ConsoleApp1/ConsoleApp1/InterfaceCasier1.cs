@@ -32,5 +32,12 @@ namespace ConsoleApp1
             this.Controls.Add(new UserControl2());
 
         }
+
+        private void EndButton_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new Home());
+        }
     }
 }
