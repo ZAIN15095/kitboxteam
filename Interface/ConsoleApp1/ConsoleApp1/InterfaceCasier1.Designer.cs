@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             ManiXButton.Office2010Blue office2010Blue1 = new ManiXButton.Office2010Blue();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfaceCasier1));
             this.DoorSelect = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DoorColorText = new System.Windows.Forms.ComboBox();
@@ -45,6 +46,8 @@
             this.NextButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.Submit = new ManiXButton.XButton();
+            this.RackPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.RackPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // DoorSelect
@@ -195,7 +198,7 @@
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Rockwell", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(483, -2);
+            this.label6.Location = new System.Drawing.Point(562, 2);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(250, 39);
             this.label6.TabIndex = 44;
@@ -267,11 +270,22 @@
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
             // 
+            // RackPictureBox
+            // 
+            this.RackPictureBox.Image = global::ConsoleApp1.Properties.Resources._1;
+            this.RackPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("RackPictureBox.InitialImage")));
+            this.RackPictureBox.Location = new System.Drawing.Point(153, 77);
+            this.RackPictureBox.Name = "RackPictureBox";
+            this.RackPictureBox.Size = new System.Drawing.Size(422, 359);
+            this.RackPictureBox.TabIndex = 75;
+            this.RackPictureBox.TabStop = false;
+            // 
             // InterfaceCasier1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
+            this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
+            this.Controls.Add(this.RackPictureBox);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.DoorSelect);
             this.Controls.Add(this.label7);
@@ -290,6 +304,7 @@
             this.Controls.Add(this.label1);
             this.Name = "InterfaceCasier1";
             this.Size = new System.Drawing.Size(1036, 510);
+            ((System.ComponentModel.ISupportInitialize)(this.RackPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +328,6 @@
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Label label1;
         private ManiXButton.XButton Submit;
+        private System.Windows.Forms.PictureBox RackPictureBox;
     }
 }

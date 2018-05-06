@@ -37,5 +37,10 @@ namespace ConsoleApp1
             this.Controls.Clear();
             this.Controls.Add(new Home());
         }
+
+        private void InterfaceCasier5_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -118,71 +118,47 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Round_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Round_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Key_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Key_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KEWLOX_HOMEPAGE_SLIDE_04-1024x5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_04-1024x5121.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chevron Left_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chevron Left_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Cancel_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2--2483679-Marble Grunge Text1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2--2483679-Marble Grunge Text1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="KEWLOX_HOMEPAGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEWLOX_HOMEPAGE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Manager_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Manager_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2--2483679-Marble Grunge Text" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2--2483679-Marble Grunge Text.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Chevron Right_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Chevron Right_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="2--2483679-Marble Grunge Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\2--2483679-Marble Grunge Texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="87f7f7723bad552" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\87f7f7723bad552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Round_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Round_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Info_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Info_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Help_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Help_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Delete_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Delete_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="4308422656_ff6eb7704c" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4308422656_ff6eb7704c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Cancel_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Redo_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Redo_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Key_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Key_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Round_90px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Round_90px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Redo_52px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Redo_52px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Round_70px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Round_70px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="87f7f7723bad552" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\87f7f7723bad552.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="KEWLOX_HOMEPAGE_SLIDE_04-1024x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_04-1024x512.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x512.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="2--2483679-Marble Grunge Text" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Text.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Round_70px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Round_70px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Manager_64px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Manager_64px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Info_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Info_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chevron Left_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chevron Left_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Undo_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Undo_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,10 +166,55 @@
   <data name="Key_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Key_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Chevron Right_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Chevron Right_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Help_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KEWLOX_HOMEPAGE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEWLOX_HOMEPAGE.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2--2483679-Marble Grunge Text1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Text1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2--2483679-Marble Grunge Texture" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2--2483679-Marble Grunge Texture.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Round_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Round_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Redo_52px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Redo_52px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KEWLOX_HOMEPAGE_SLIDE_04-1024x5121" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_04-1024x5121.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cancel_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cancel_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="KEWLOX_HOMEPAGE_SLIDE_16-1024x512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\KEWLOX_HOMEPAGE_SLIDE_16-1024x512.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Manager_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Manager_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Cancel_48px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Cancel_48px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4308422656_ff6eb7704c" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4308422656_ff6eb7704c.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\7.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
