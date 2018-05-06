@@ -13,6 +13,9 @@ namespace ConsoleApp1
 {
     public partial class InterfaceCasier1 : UserControl
     {
+        //declaration of variables
+        public static int heightValue;
+
         public InterfaceCasier1()
         {
             InitializeComponent();
@@ -20,6 +23,18 @@ namespace ConsoleApp1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            //height value
+            Object selectedHeightBox = HeigthText.SelectedItem;
+            heightValue = Convert.ToInt32(selectedHeightBox);
+
+            //insert height to Dimensions
+            UserControl2.dimensions.Height = heightValue;
+
+            //test de passage de variable (the object Dimensions bas)
+            MessageBox.Show("height = " + Convert.ToString(UserControl2.dimensions.Height) + "  " +
+                "witdh = " + Convert.ToString(UserControl2.dimensions.Width) + "  " +
+                "depth = " + Convert.ToString(UserControl2.dimensions.Depth));
+
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new InterfaceCasier2());
@@ -38,6 +53,11 @@ namespace ConsoleApp1
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new Home());
+        }
+
+        private void InterfaceCasier1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

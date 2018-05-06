@@ -142,3 +142,10 @@ C:\Users\amy\Desktop\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\Cons
 C:\Users\amy\Desktop\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier5.resources
 C:\Users\amy\Desktop\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier6.resources
 C:\Users\amy\Desktop\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier7.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier1.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier2.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier3.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier4.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier5.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier6.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Interface\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceCasier7.resources

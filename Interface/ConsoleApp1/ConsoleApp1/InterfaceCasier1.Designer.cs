@@ -304,6 +304,7 @@
             this.Controls.Add(this.label1);
             this.Name = "InterfaceCasier1";
             this.Size = new System.Drawing.Size(1036, 510);
+            this.Load += new System.EventHandler(this.InterfaceCasier1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RackPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

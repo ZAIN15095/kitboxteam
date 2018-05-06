@@ -6,6 +6,11 @@ namespace ConsoleApp1
 {
     public partial class UserControl2 : UserControl
     {
+        //declaration of variables
+        public static int widthValue;
+        public static int depthValue;
+        public static Dimensions dimensions;
+
         public UserControl2()
         {
             InitializeComponent();
@@ -40,6 +45,22 @@ namespace ConsoleApp1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            //width value
+            Object selectedWithBox = width.SelectedItem;
+            widthValue = Convert.ToInt32(selectedWithBox);
+
+            //depth value
+            Object selectedDepthBox = depth.SelectedItem;
+            int depthValue = Convert.ToInt32(selectedDepthBox);
+
+            //Object Dimensions
+            dimensions = new Dimensions(0, widthValue, depthValue);
+
+            //test de passage de variable (the object Dimensions bas)
+            MessageBox.Show("height = " + Convert.ToString(dimensions.Height) + "  " +
+                "witdh = " + Convert.ToString(dimensions.Width) + "  " +
+                "depth = " + Convert.ToString(dimensions.Depth));
+
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new InterfaceCasier1());
