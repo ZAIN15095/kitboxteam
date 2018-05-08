@@ -1,0 +1,15 @@
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/bin/Debug/Main_Project.exe
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/bin/Debug/Main_Project.pdb
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/bin/Debug/KITBOX_project.dll
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/bin/Debug/KITBOX_project.pdb
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.csprojResolveAssemblyReference.cache
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.csproj.CoreCompileInputs.cache
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.exe
+/Users/sonoflight/Projects/KITBOX_project/Main_Project/obj/Debug/Main_Project.pdb
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\bin\Debug\Main_Project.exe
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\bin\Debug\Main_Project.pdb
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\bin\Debug\KITBOX_project.pdb
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\obj\Debug\Main_Project.csprojResolveAssemblyReference.cache
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\obj\Debug\Main_Project.csproj.CoreCompileInputs.cache
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\obj\Debug\Main_Project.exe
+C:\Users\amy\Desktop\kitboxteam\KitBox_Console_Main_Project\obj\Debug\Main_Project.pdb
