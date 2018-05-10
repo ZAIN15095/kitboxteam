@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            ManiXButton.Office2010Blue office2010Blue1 = new ManiXButton.Office2010Blue();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InterfaceCasier1));
+            ManiXButton.Office2010Blue office2010Blue1 = new ManiXButton.Office2010Blue();
             this.DoorSelect = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.DoorColorText = new System.Windows.Forms.ComboBox();
@@ -45,8 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.Submit = new ManiXButton.XButton();
             this.RackPictureBox = new System.Windows.Forms.PictureBox();
+            this.Submit = new ManiXButton.XButton();
             ((System.ComponentModel.ISupportInitialize)(this.RackPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +58,7 @@
             this.DoorSelect.Size = new System.Drawing.Size(15, 14);
             this.DoorSelect.TabIndex = 55;
             this.DoorSelect.UseVisualStyleBackColor = true;
+            this.DoorSelect.CheckedChanged += new System.EventHandler(this.DoorSelect_CheckedChanged);
             // 
             // label7
             // 
@@ -242,6 +243,16 @@
             this.label1.TabIndex = 41;
             this.label1.Text = "Heigth";
             // 
+            // RackPictureBox
+            // 
+            this.RackPictureBox.Image = global::ConsoleApp1.Properties.Resources._1;
+            this.RackPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("RackPictureBox.InitialImage")));
+            this.RackPictureBox.Location = new System.Drawing.Point(153, 77);
+            this.RackPictureBox.Name = "RackPictureBox";
+            this.RackPictureBox.Size = new System.Drawing.Size(422, 359);
+            this.RackPictureBox.TabIndex = 75;
+            this.RackPictureBox.TabStop = false;
+            // 
             // Submit
             // 
             office2010Blue1.BorderColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(72)))), ((int)(((byte)(161)))));
@@ -269,16 +280,7 @@
             this.Submit.Text = "Submit";
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
-            // 
-            // RackPictureBox
-            // 
-            this.RackPictureBox.Image = global::ConsoleApp1.Properties.Resources._1;
-            this.RackPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("RackPictureBox.InitialImage")));
-            this.RackPictureBox.Location = new System.Drawing.Point(153, 77);
-            this.RackPictureBox.Name = "RackPictureBox";
-            this.RackPictureBox.Size = new System.Drawing.Size(422, 359);
-            this.RackPictureBox.TabIndex = 75;
-            this.RackPictureBox.TabStop = false;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // InterfaceCasier1
             // 

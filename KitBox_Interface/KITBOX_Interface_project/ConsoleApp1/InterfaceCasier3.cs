@@ -46,7 +46,19 @@ namespace ConsoleApp1
 
         private void InterfaceCasier3_Load(object sender, EventArgs e)
         {
+            Do_checked();
+        }
 
+        private void DoorSelect_CheckedChanged(object sender, EventArgs e)
+        {
+            Do_checked();
+        }
+
+        //activation of DoorColorText
+        private void Do_checked()
+        {
+            //activation of DoorColorText if DoorSelect is select
+            DoorColorText.Enabled = DoorSelect.Checked;
         }
     }
 }

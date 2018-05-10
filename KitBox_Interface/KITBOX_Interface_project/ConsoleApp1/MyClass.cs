@@ -38,7 +38,6 @@ namespace KITBOX_project
 		{
 			return String.Format("Height: {0}; Width: {1}; Depth: {2}", Height, Width, Depth);
 		}
-
 	}
 
 	//Abstract class item used to create all others item.
@@ -48,15 +47,11 @@ namespace KITBOX_project
 		protected string color;
         protected Dimensions dimensions;
 
-
-
-
         public Item(string color, Dimensions dimensions)
 		{
 			
 			this.color = color;
             this.dimensions = dimensions;
-
 		}
 
 		public string Color
@@ -86,20 +81,22 @@ namespace KITBOX_project
 				return "Color: " + color;
 
 		}
-
-
 	}
 
     public class Battens : Item
     {
         private static readonly String name = "Tasseau";
+        private int height;
 
-        public Battens( Dimensions dimensions, string color = null) : base(color, dimensions)
-        { }
+        //Battens has a height
+        public Battens(int height, Dimensions dimensions, string color = null) : base(color, dimensions)
+        {
+            this.height = dimensions.Height;
+        }
 
         public new string ToString()
         {
-            return string.Format("{0}- heigth: {1}", Name, dimensions.Height);
+            return string.Format("{0}- heigth: {1}", Name, height);
         }
         public String Name 
         {

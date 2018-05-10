@@ -56,6 +56,7 @@
             this.DoorSelect.Size = new System.Drawing.Size(15, 14);
             this.DoorSelect.TabIndex = 70;
             this.DoorSelect.UseVisualStyleBackColor = true;
+            this.DoorSelect.CheckedChanged += new System.EventHandler(this.DoorSelect_CheckedChanged);
             // 
             // label7
             // 

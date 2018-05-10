@@ -66,7 +66,8 @@ namespace ConsoleApp1
                 this.Controls.Clear();
                 this.Controls.Add(new InterfaceCasier1());
             }
-            
+            else
+                MessageBox.Show("Veuillez entrez la largeur et la profondeur de votre casier");
         }
 
         private void EndButton_Click(object sender, EventArgs e)
