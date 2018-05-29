@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.OleDb;
 namespace KITBOX_project
 {
 	//Class Dimensions used for all item dimension.
@@ -38,6 +41,7 @@ namespace KITBOX_project
 		{
 			return String.Format("Height: {0}; Width: {1}; Depth: {2}", Height, Width, Depth);
 		}
+
 	}
 
 	//Abstract class item used to create all others item.
@@ -47,11 +51,15 @@ namespace KITBOX_project
 		protected string color;
         protected Dimensions dimensions;
 
+
+
+
         public Item(string color, Dimensions dimensions)
 		{
 			
 			this.color = color;
             this.dimensions = dimensions;
+
 		}
 
 		public string Color
@@ -81,26 +89,43 @@ namespace KITBOX_project
 				return "Color: " + color;
 
 		}
+
+
 	}
 
     public class Battens : Item
     {
         private static readonly String name = "Tasseau";
-        private int height;
 
-        //Battens has a height
-        public Battens(int height, Dimensions dimensions, string color = null) : base(color, dimensions)
-        {
-            this.height = dimensions.Height;
-        }
+        public Battens( Dimensions dimensions, string color = null) : base(color, dimensions)
+        { }
 
         public new string ToString()
         {
-            return string.Format("{0}- heigth: {1}", Name, height);
+            return string.Format("{0}- heigth: {1}", Name, dimensions.Height);
         }
         public String Name 
         {
             get { return name; }
+        }
+        public string Code()
+        {
+            if (dimensions.Height == 32)
+            {
+                return "TAS27";
+
+            }
+            if (dimensions.Height == 42)
+            {
+                return "TAS37";
+
+            }
+            if (dimensions.Height == 62)
+            {
+                return "TAS47";
+
+            }
+            return null;
         }
 
     }
@@ -121,6 +146,21 @@ namespace KITBOX_project
         {
             get { return name; }
         }
+        public string Code()
+        {
+            if(color == "BRUN")
+            {
+                string Code = "PAG" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Depth)+"BR";
+                return Code;
+            }
+            if (color == "BLANC")
+            {
+                string Code = "PAG" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Depth) + "BL";
+                return Code;
+            }
+
+            return null;
+        }
          
     }
 
@@ -138,6 +178,21 @@ namespace KITBOX_project
         public String Name
         {
             get { return name; }
+        }
+        public string Code()
+        {
+            if (color == "BRUN")
+            {
+                string Code = "PAH" + Convert.ToString(dimensions.Depth) + Convert.ToString(dimensions.Width) + "BR";
+                return Code;
+            }
+            if (color == "BLANC")
+            {
+                string Code = "PAH" + Convert.ToString(dimensions.Depth) + Convert.ToString(dimensions.Width) + "BL";
+                return Code;
+            }
+
+            return null;
         }
 
 
@@ -158,6 +213,21 @@ namespace KITBOX_project
         {
             get { return name; }
         }
+        public string Code()
+        {
+            if (color == "BRUN")
+            {
+                string Code = "PAR" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Width) + "BR";
+                return Code;
+            }
+            if (color == "BLANC")
+            {
+                string Code = "PAR" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Width) + "BL";
+                return Code;
+            }
+
+            return null;
+        }
 
 
     }
@@ -177,6 +247,11 @@ namespace KITBOX_project
         public String Name
         {
             get { return name; }
+        }
+        public string Code()
+        {
+            string code = "TRR" + Convert.ToString(dimensions.Width);
+            return code;
         }
 
 
@@ -348,4 +423,59 @@ namespace KITBOX_project
 
 	}
 	
+}
+
+public class Broker
+{
+    OleDbConnection connection;
+    OleDbCommand command;
+    private void connectTo()
+    {
+        connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\amy\Desktop\kitboxteam\KitBox_DB\KitBox_DB.mdb");
+        command = connection.CreateCommand();
+        
+
+       
+    }
+    public Broker() 
+    {
+        connectTo();
+    }
+
+    public List<string > viewData()
+    {
+        List<string> dataList
+            = new List<string>();
+
+        try
+        {
+            command.CommandText = "SELECT * FROM Porte";
+            command.CommandType = CommandType.Text;
+            connection.Open();
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                string code = reader["PK_Porte"].ToString() + " - "+ reader["Enstock"].ToString();
+                dataList.Add(code);
+            }
+
+            return dataList;
+              
+        }
+
+        catch (Exception)
+        {
+            throw;
+        }
+        finally
+        {
+            if(connection != null)
+            {
+                connection.Close();
+            }
+
+        }
+    }
 }

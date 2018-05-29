@@ -7,11 +7,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using KITBOX_project;
 
 namespace ConsoleApp1
 {
     public partial class InterfaceCasier6 : UserControl
     {
+        //declaration of variables
+        public static int heightValue;
+        public static string panelColor;
+
+        public static Dimensions dimensions;
+        public static AngleBar anglebar;
+        public static LRpanel lrpanel;
+        public static Battens battens;
+        public static UDpanel udpanel;
+        public static BackPanel backPanel;
+        public static BCrossbar bcrossbar;
+        public static FCrossbar fcrossbar;
+        public static LRcrossbar lrcrossbar;
+        public static Rack rack;
         public InterfaceCasier6()
         {
             InitializeComponent();
@@ -19,6 +34,44 @@ namespace ConsoleApp1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+
+            //height value
+            heightValue = Convert.ToInt32(HeigthText.Text);
+
+            //creating dimension for the rack
+            dimensions = new Dimensions(heightValue, UserControl2.widthValue, UserControl2.depthValue);
+
+
+
+
+
+            // creating objects
+            panelColor = PanelColorText.Text;
+            udpanel = new UDpanel(panelColor, dimensions);
+            backPanel = new BackPanel(panelColor, dimensions);
+            bcrossbar = new BCrossbar(dimensions);
+            fcrossbar = new FCrossbar(dimensions);
+            lrcrossbar = new LRcrossbar(dimensions);
+            anglebar = new AngleBar(panelColor, dimensions);
+            lrpanel = new LRpanel(panelColor, dimensions);
+            battens = new Battens(dimensions);
+
+            rack = new Rack(
+                battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar);
+
+            //display the rack create
+            MessageBox.Show(
+                "Rack 6 constitution" + "\n" +
+                battens.ToString() + "\n" +
+                udpanel.ToString() + "\n" +
+                backPanel.ToString() + "\n" +
+                bcrossbar.ToString() + "\n" +
+                fcrossbar.ToString() + "\n" +
+                fcrossbar.ToString() + "\n" +
+                lrcrossbar.ToString() + "\n" +
+                anglebar.ToString() + "\n" +
+                lrpanel.ToString() + "\n");
+
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new InterfaceCasier7());
@@ -42,19 +95,14 @@ namespace ConsoleApp1
 
         private void InterfaceCasier6_Load(object sender, EventArgs e)
         {
-            Do_checked();
+
         }
 
-        private void DoorSelect_CheckedChanged(object sender, EventArgs e)
+        private void Submit_Click(object sender, EventArgs e)
         {
-            Do_checked();
-        }
-
-        //activation of DoorColorText
-        private void Do_checked()
-        {
-            //activation of DoorColorText if DoorSelect is select
-            DoorColorText.Enabled = DoorSelect.Checked;
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfaceCommande());
         }
     }
 }

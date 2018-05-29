@@ -64,6 +64,7 @@
             this.HeigthText.Name = "HeigthText";
             this.HeigthText.Size = new System.Drawing.Size(143, 31);
             this.HeigthText.TabIndex = 61;
+            this.HeigthText.SelectedIndexChanged += new System.EventHandler(this.HeigthText_SelectedIndexChanged);
             // 
             // DoorSelect
             // 
@@ -73,7 +74,6 @@
             this.DoorSelect.Size = new System.Drawing.Size(15, 14);
             this.DoorSelect.TabIndex = 70;
             this.DoorSelect.UseVisualStyleBackColor = true;
-            this.DoorSelect.CheckedChanged += new System.EventHandler(this.DoorSelect_CheckedChanged);
             // 
             // label7
             // 
@@ -270,6 +270,7 @@
             this.Submit.Text = "Submit";
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
+            this.Submit.Click += new System.EventHandler(this.Submit_Click);
             // 
             // RackPictureBox
             // 

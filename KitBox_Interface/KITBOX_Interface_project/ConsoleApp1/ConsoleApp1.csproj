@@ -137,6 +137,12 @@
     <Compile Include="InterfaceCasier7.Designer.cs">
       <DependentUpon>InterfaceCasier7.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceCommande.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceCommande.Designer.cs">
+      <DependentUpon>InterfaceCommande.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
@@ -216,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceCasier7.resx">
       <DependentUpon>InterfaceCasier7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceCommande.resx">
+      <DependentUpon>InterfaceCommande.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

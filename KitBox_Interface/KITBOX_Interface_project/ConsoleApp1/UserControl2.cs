@@ -9,7 +9,7 @@ namespace ConsoleApp1
         //declaration of variables
         public static int widthValue;
         public static int depthValue;
-        public static Dimensions dimensions;
+       
 
         public UserControl2()
         {
@@ -53,21 +53,18 @@ namespace ConsoleApp1
             Object selectedDepthBox = depth.SelectedItem;
             int depthValue = Convert.ToInt32(selectedDepthBox);
 
-            //Object Dimensions
-            dimensions = new Dimensions(0, widthValue, depthValue);
-
             //test de passage de variable (the object Dimensions bas)
-            MessageBox.Show("height = " + Convert.ToString(dimensions.Height) + "  " +
-                "witdh = " + Convert.ToString(dimensions.Width) + "  " +
-                "depth = " + Convert.ToString(dimensions.Depth));
+            MessageBox.Show(
+                "witdh = " + widthValue + "  " +
+                "depth = " + depthValue);
+
             if (widthValue !=0 && depthValue !=0)
             {
                 this.BackgroundImage = null;
                 this.Controls.Clear();
                 this.Controls.Add(new InterfaceCasier1());
             }
-            else
-                MessageBox.Show("Veuillez entrez la largeur et la profondeur de votre casier");
+            
         }
 
         private void EndButton_Click(object sender, EventArgs e)
