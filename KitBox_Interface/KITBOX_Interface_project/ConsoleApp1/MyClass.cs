@@ -2,6 +2,16 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
+using KITBOX_project;
+using ConsoleApp1;
+using System.ComponentModel;
+using System.Drawing;
+
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
 namespace KITBOX_project
 {
 	//Class Dimensions used for all item dimension.
@@ -62,7 +72,7 @@ namespace KITBOX_project
 
 		}
 
-		public string Color
+		public virtual string Color
 		{
 			get { return color; }
 			set { color = value; }
@@ -100,7 +110,7 @@ namespace KITBOX_project
         public Battens( Dimensions dimensions, string color = null) : base(color, dimensions)
         { }
 
-        public new string ToString()
+        public override string ToString()
         {
             return string.Format("{0}- heigth: {1}", Name, dimensions.Height);
         }
@@ -137,6 +147,12 @@ namespace KITBOX_project
 
         public LRpanel(string color, Dimensions dimensions) : base(color, dimensions)
         { }
+
+        public override string Color
+        {
+            get { return color; }
+            set { color = value; }
+        }
 
         public override string ToString()
         {
@@ -302,6 +318,12 @@ namespace KITBOX_project
         public Door(string color , Dimensions dimensions) : base(color , dimensions)
         { }
 
+        public override string Color
+        {
+            get { return color; }
+            set { color = value; }
+        }
+
         public override string ToString()
         {
             return string.Format("{0} - Heigth: {1} - Width {2} - Color: {3} ", Name , dimensions.Height , dimensions.Width, base.Color);
@@ -343,7 +365,7 @@ namespace KITBOX_project
 
 
         public Rack(Battens battens, LRpanel lrpanel, UDpanel udpanel, BackPanel backpanel,
-                    FCrossbar fcrossbar, BCrossbar bcrossbar, LRcrossbar lrcrossbar, AngleBar anglebar, Door door = null)
+                    FCrossbar fcrossbar, BCrossbar bcrossbar, LRcrossbar lrcrossbar, AngleBar anglebar, Door door)
 		{
 			this.battens = battens;
 			this.lrpanel = lrpanel;
@@ -429,9 +451,10 @@ public class Broker
 {
     OleDbConnection connection;
     OleDbCommand command;
+    Rack item;
     private void connectTo()
     {
-        connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\amy\Desktop\kitboxteam\KitBox_DB\KitBox_DB.mdb");
+        connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_DB\KitBox_DB\KitBox_DB.mdb");
         command = connection.CreateCommand();
         
 
@@ -457,7 +480,7 @@ public class Broker
 
             while (reader.Read())
             {
-                string code = reader["PK_Porte"].ToString() + " - "+ reader["Enstock"].ToString();
+                string code = reader["PK_Porte"].ToString() + " - "+ reader["Enstock"].ToString() + "; ";
                 dataList.Add(code);
             }
 
@@ -478,4 +501,26 @@ public class Broker
 
         }
     }
+
+    /*public void deleteDoor()
+    {
+        command.CommandText = "SELECT * FROM Porte";
+        command.CommandType = CommandType.Text;
+        connection.Open();
+
+        OleDbDataReader reader = command.ExecuteReader();
+
+        while (reader.Read())
+        {
+            foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
+            {
+                if (UserControl2.dimensions.Height == Convert.ToInt32(reader["PK_Hauteur"].ToString()) && UserControl2.dimensions.Width == Convert.ToInt32(reader["PK_Largeur"].ToString()) && casier.Value.Door.Color == reader["PK_Color"].ToString())
+                {
+                    int retrait = Convert.ToInt32(reader["Enstock"].ToString());
+                    retrait = Convert.ToInt32(reader["Enstock"].ToString()) - 1;
+                    reader["Enstock"] = Convert.ToString(retrait);
+                }
+            }
+        }
+    }*/
 }

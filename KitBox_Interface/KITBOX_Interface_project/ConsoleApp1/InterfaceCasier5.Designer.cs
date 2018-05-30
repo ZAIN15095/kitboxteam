@@ -58,6 +58,7 @@
             this.DoorSelect.Size = new System.Drawing.Size(15, 14);
             this.DoorSelect.TabIndex = 70;
             this.DoorSelect.UseVisualStyleBackColor = true;
+            this.DoorSelect.CheckedChanged += new System.EventHandler(this.DoorSelect_CheckedChanged_1);
             // 
             // label7
             // 
@@ -262,11 +263,11 @@
             office2010Blue1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Blue1.TextColor = System.Drawing.Color.White;
             this.Submit.ColorTable = office2010Blue1;
-            this.Submit.Location = new System.Drawing.Point(729, 454);
+            this.Submit.Location = new System.Drawing.Point(708, 454);
             this.Submit.Name = "Submit";
-            this.Submit.Size = new System.Drawing.Size(85, 38);
+            this.Submit.Size = new System.Drawing.Size(128, 38);
             this.Submit.TabIndex = 73;
-            this.Submit.Text = "Submit";
+            this.Submit.Text = "Finaliser la commande";
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
