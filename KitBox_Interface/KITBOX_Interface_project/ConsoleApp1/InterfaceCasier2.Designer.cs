@@ -242,7 +242,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 23);
             this.label1.TabIndex = 56;
-            this.label1.Text = "Heigth";
+            this.label1.Text = "Height";
             // 
             // Submit
             // 

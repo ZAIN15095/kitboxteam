@@ -71,5 +71,13 @@ namespace ConsoleApp1
 
             }
         }
+
+        private void Cancel_Click(object sender, EventArgs e)
+        {
+            UserControl2.command.Clear();
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new Home());
+        }
     }
 }

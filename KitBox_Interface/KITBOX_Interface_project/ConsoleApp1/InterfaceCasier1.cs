@@ -37,49 +37,7 @@ namespace ConsoleApp1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            CreateObject();
-
-            if (!panelColor.Equals("") && !heightValue.Equals(0))
-            {
-                //choose door or not
-                if (DoorSelect.Checked)
-                {
-                    doorColor = DoorColorText.Text;
-                    door = new Door(doorColor, UserControl2.dimensions);
-                    rack = new Rack(
-                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    //cette partie fait mal le travail puisque quand colorDoorValue == "" il va quand meme vers 
-                    //l'interface suivante
-                    //donc a revoir cette partie
-                    if (!doorColor.Equals(""))
-                    {
-                        UserControl2.command.Add("CASIER 1", rack);
-
-                        this.BackgroundImage = null;
-                        this.Controls.Clear();
-                        this.Controls.Add(new InterfaceCasier2());
-                    }
-                    else
-                    {
-                        MessageBox.Show("Veuillez choisir la couleur de la porte de votre casier", "Erreur",
-                        MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    rack = new Rack(
-                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    UserControl2.command.Add("CASIER 1", rack);
-                    this.BackgroundImage = null;
-                    this.Controls.Clear();
-                    this.Controls.Add(new InterfaceCasier2());
-                }
-            }
-            else
-            {
-                MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            Nextstep();
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -92,6 +50,7 @@ namespace ConsoleApp1
 
         private void EndButton_Click(object sender, EventArgs e)
         {
+            UserControl2.command.Clear();
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new Home());
@@ -104,39 +63,7 @@ namespace ConsoleApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            CreateObject();
-
-            if (!panelColor.Equals("") && !heightValue.Equals(0))
-            {
-                if (DoorSelect.Checked)
-                {
-                    doorColor = DoorColorText.Text;
-                    door = new Door(doorColor, UserControl2.dimensions);
-                    rack = new Rack(
-                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-
-                    UserControl2.command.Add("CASIER 1", rack);
-
-                    this.BackgroundImage = null;
-                    this.Controls.Clear();
-                    this.Controls.Add(new InterfaceCommande());
-
-                }
-                else
-                {
-                    rack = new Rack(
-                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    UserControl2.command.Add("CASIER 1", rack);
-
-                    this.BackgroundImage = null;
-                    this.Controls.Clear();
-                    this.Controls.Add(new InterfaceCommande());
-                }
-
-            }
-            else
-                MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
-                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            Finalisation();
         }
 
         private void PanelColorText_SelectedIndexChanged(object sender, EventArgs e)
@@ -148,7 +75,8 @@ namespace ConsoleApp1
         public void CreateObject()
         {
             //height value
-            heightValue = Convert.ToInt32(HeigthText.Text);
+            Object selectedHeightBox = HeigthText.SelectedItem;
+            heightValue = Convert.ToInt32(selectedHeightBox);
 
             //insert height to Dimensions
             UserControl2.dimensions.Height = heightValue;
@@ -176,6 +104,100 @@ namespace ConsoleApp1
         private void DoorSelect_CheckedChanged(object sender, EventArgs e)
         {
             Do_checked();
+        }
+
+        // Next step
+        public void Nextstep()
+        {
+            CreateObject();
+
+            if (!panelColor.Equals("") && !heightValue.Equals(0))
+            {
+                //choose door or not
+                if (DoorSelect.Checked)
+                {
+                    doorColor = DoorColorText.Text;
+                    door = new Door(doorColor, UserControl2.dimensions);
+                    rack = new Rack(
+                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
+
+                    if (!doorColor.Equals(""))
+                    {
+                        UserControl2.command.Add("CASIER 1", rack);
+
+                        this.BackgroundImage = null;
+                        this.Controls.Clear();
+                        this.Controls.Add(new InterfaceCasier2());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Veuillez choisir la couleur de la porte de votre casier", "Erreur",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    rack = new Rack(
+                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
+                    UserControl2.command.Add("CASIER 1", rack);
+
+                    this.BackgroundImage = null;
+                    this.Controls.Clear();
+                    this.Controls.Add(new InterfaceCasier2());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Finalisation method
+        public void Finalisation()
+        {
+
+            CreateObject();
+
+            if (!panelColor.Equals("") && !heightValue.Equals(0))
+            {
+                if (DoorSelect.Checked)
+                {
+                    doorColor = DoorColorText.Text;
+                    door = new Door(doorColor, UserControl2.dimensions);
+                    rack = new Rack(
+                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
+
+                    if (!doorColor.Equals(""))
+                    {
+                        UserControl2.command.Add("CASIER 1", rack);
+
+                        this.BackgroundImage = null;
+                        this.Controls.Clear();
+                        this.Controls.Add(new InterfaceCommande());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Veuillez choisir la couleur de la porte de votre casier", "Erreur",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                }
+                else
+                {
+                    rack = new Rack(
+                    battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
+                    UserControl2.command.Add("CASIER 1", rack);
+
+                    this.BackgroundImage = null;
+                    this.Controls.Clear();
+                    this.Controls.Add(new InterfaceCommande());
+                }
+
+            }
+            else
+                MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

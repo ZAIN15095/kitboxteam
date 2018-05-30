@@ -36,6 +36,78 @@ namespace ConsoleApp1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            Nextstep();
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfaceCasier3());
+
+        }
+
+        private void EndButton_Click(object sender, EventArgs e)
+        {
+            UserControl2.command.Clear();
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new Home());
+        }
+
+        private void InterfaceCasier4_Load(object sender, EventArgs e)
+        {
+            Do_checked();
+        }
+
+        //objects initialisation
+        public void CreateObject()
+        {
+            //height value
+            Object selectedHeightBox = HeigthText.SelectedItem;
+            heightValue = Convert.ToInt32(selectedHeightBox);
+
+            //insert height to Dimensions
+            UserControl2.dimensions.Height = heightValue;
+
+            // creating objects
+            panelColor = PanelColorText.Text;
+            udpanel = new UDpanel(panelColor, UserControl2.dimensions);
+            backPanel = new BackPanel(panelColor, UserControl2.dimensions);
+            bcrossbar = new BCrossbar(UserControl2.dimensions);
+            fcrossbar = new FCrossbar(UserControl2.dimensions);
+            lrcrossbar = new LRcrossbar(UserControl2.dimensions);
+            anglebar = new AngleBar(panelColor, UserControl2.dimensions);
+            lrpanel = new LRpanel(panelColor, UserControl2.dimensions);
+            battens = new Battens(UserControl2.dimensions);
+
+        }
+
+        //activation of DoorColorText
+        private void Do_checked()
+        {
+            //activation of DoorColorText if DoorSelect is select
+            DoorColorText.Enabled = DoorSelect.Checked;
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            Finalisation();
+        }
+
+        private void HeigthText_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DoorSelect_CheckedChanged_1(object sender, EventArgs e)
+        {
+            Do_checked();
+        }
+
+        // Next step
+        public void Nextstep()
+        {
             CreateObject();
 
             if (!panelColor.Equals("") && !heightValue.Equals(0))
@@ -47,9 +119,7 @@ namespace ConsoleApp1
                     door = new Door(doorColor, UserControl2.dimensions);
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    //cette partie fait mal le travail puisque quand colorDoorValue == "" il va quand meme vers 
-                    //l'interface suivante
-                    //donc a revoir cette partie
+
                     if (!doorColor.Equals(""))
                     {
                         UserControl2.command.Add("CASIER 4", rack);
@@ -80,60 +150,12 @@ namespace ConsoleApp1
                 MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
-        private void BackButton_Click(object sender, EventArgs e)
+        // Finalisation method
+        public void Finalisation()
         {
-            this.BackgroundImage = null;
-            this.Controls.Clear();
-            this.Controls.Add(new InterfaceCasier3());
 
-        }
-
-        private void EndButton_Click(object sender, EventArgs e)
-        {
-            this.BackgroundImage = null;
-            this.Controls.Clear();
-            this.Controls.Add(new Home());
-        }
-
-        private void InterfaceCasier4_Load(object sender, EventArgs e)
-        {
-            Do_checked();
-        }
-
-        //objects initialisation
-        public void CreateObject()
-        {
-            //height value
-            heightValue = Convert.ToInt32(HeigthText.Text);
-
-            //insert height to Dimensions
-            UserControl2.dimensions.Height = heightValue;
-
-            // creating objects
-            panelColor = PanelColorText.Text;
-            udpanel = new UDpanel(panelColor, UserControl2.dimensions);
-            backPanel = new BackPanel(panelColor, UserControl2.dimensions);
-            bcrossbar = new BCrossbar(UserControl2.dimensions);
-            fcrossbar = new FCrossbar(UserControl2.dimensions);
-            lrcrossbar = new LRcrossbar(UserControl2.dimensions);
-            anglebar = new AngleBar(panelColor, UserControl2.dimensions);
-            lrpanel = new LRpanel(panelColor, UserControl2.dimensions);
-            battens = new Battens(UserControl2.dimensions);
-
-        }
-
-        //activation of DoorColorText
-        private void Do_checked()
-        {
-            //activation of DoorColorText if DoorSelect is select
-            DoorColorText.Enabled = DoorSelect.Checked;
-        }
-
-        private void Submit_Click(object sender, EventArgs e)
-        {
             CreateObject();
 
             if (!panelColor.Equals("") && !heightValue.Equals(0))
@@ -145,11 +167,19 @@ namespace ConsoleApp1
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
 
-                    UserControl2.command.Add("CASIER 4", rack);
+                    if (!doorColor.Equals(""))
+                    {
+                        UserControl2.command.Add("CASIER 4", rack);
 
-                    this.BackgroundImage = null;
-                    this.Controls.Clear();
-                    this.Controls.Add(new InterfaceCommande());
+                        this.BackgroundImage = null;
+                        this.Controls.Clear();
+                        this.Controls.Add(new InterfaceCommande());
+                    }
+                    else
+                    {
+                        MessageBox.Show("Veuillez choisir la couleur de la porte de votre casier", "Erreur",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
 
                 }
                 else
@@ -167,16 +197,6 @@ namespace ConsoleApp1
             else
                 MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
-        private void HeigthText_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DoorSelect_CheckedChanged_1(object sender, EventArgs e)
-        {
-            Do_checked();
         }
     }
 }

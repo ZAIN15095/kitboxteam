@@ -36,7 +36,7 @@
             this.width = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
             this.depth = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -152,19 +152,19 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button_Help);
             // 
-            // button3
+            // Cancel
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::ConsoleApp1.Properties.Resources.Cancel_48px;
-            this.button3.Location = new System.Drawing.Point(935, 9);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(48, 44);
-            this.button3.TabIndex = 20;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.EndButton_Click);
+            this.Cancel.BackColor = System.Drawing.Color.Transparent;
+            this.Cancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.Cancel.FlatAppearance.BorderSize = 0;
+            this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancel.Image = global::ConsoleApp1.Properties.Resources.Cancel_48px;
+            this.Cancel.Location = new System.Drawing.Point(935, 9);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(48, 44);
+            this.Cancel.TabIndex = 20;
+            this.Cancel.UseVisualStyleBackColor = false;
+            this.Cancel.Click += new System.EventHandler(this.EndButton_Click);
             // 
             // depth
             // 
@@ -216,7 +216,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.depth);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.Cancel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.width);
@@ -242,7 +242,7 @@
         private System.Windows.Forms.ComboBox width;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.ComboBox depth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
