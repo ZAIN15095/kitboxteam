@@ -451,7 +451,7 @@ public class Broker
 {
     OleDbConnection connection;
     OleDbCommand command;
-    Rack item;
+    //Rack item;
     private void connectTo()
     {
         connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_DB\KitBox_DB\KitBox_DB.mdb");
@@ -502,25 +502,104 @@ public class Broker
         }
     }
 
-    /*public void deleteDoor()
+    // delete elements from data base
+    public void deleteDoor()
     {
-        command.CommandText = "SELECT * FROM Porte";
-        command.CommandType = CommandType.Text;
+        switch (UserControl2.color_Angle)
+        {
+            case "Blanc":
+                UserControl2.color_Angle = "BL";
+                break;
+            case "Verre":
+                UserControl2.color_Angle = "VE";
+                break;
+            case "Brun":
+                UserControl2.color_Angle = "BR";
+                break;
+            case "Galvanisé":
+                UserControl2.color_Angle = "GL";
+                break;
+            case "Noir":
+                UserControl2.color_Angle = "NR";
+                break;
+        }
+
+        int H_Angle = 0;
         connection.Open();
 
-        OleDbDataReader reader = command.ExecuteReader();
-
-        while (reader.Read())
+        foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
         {
-            foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
+            H_Angle += UserControl2.dimensions.Height + 4;
+
+            switch (casier.Value.Lrpanel.Color)
             {
-                if (UserControl2.dimensions.Height == Convert.ToInt32(reader["PK_Hauteur"].ToString()) && UserControl2.dimensions.Width == Convert.ToInt32(reader["PK_Largeur"].ToString()) && casier.Value.Door.Color == reader["PK_Color"].ToString())
+                case "Blanc":
+                    casier.Value.Lrpanel.Color = "BL";
+                    break;
+                case "Verre":
+                    casier.Value.Lrpanel.Color = "VE";
+                    break;
+                case "Brun":
+                    casier.Value.Lrpanel.Color = "BR";
+                    break;
+            }
+
+            //delete PanelAR
+            command.CommandText = "UPDATE PanneauAr SET Enstock = Enstock - 1 " +
+                "WHERE Champ1 = 'PAR" + UserControl2.dimensions.Height + UserControl2.dimensions.Width + casier.Value.Lrpanel.Color + "'";
+            command.ExecuteNonQuery();
+
+            // delete panelGD
+            command.CommandText = "UPDATE PanneauGD SET Enstock = Enstock - 2 " +
+                "WHERE PK_PanneauGD = 'PAG" + UserControl2.dimensions.Height + UserControl2.dimensions.Depth + casier.Value.Lrpanel.Color + "'";
+            command.ExecuteNonQuery();
+
+            // delete panelHB
+            command.CommandText = "UPDATE PanneauHB SET Enstock = Enstock - 2 " +
+                "WHERE PK_PanneauHB = 'PAH" + UserControl2.dimensions.Height + UserControl2.dimensions.Depth + casier.Value.Lrpanel.Color + "'";
+            command.ExecuteNonQuery();
+
+            // delete CrossbarAr
+            command.CommandText = "UPDATE TraverseAr SET Enstock = Enstock - 1 " +
+                "WHERE PK_TraverseAr = 'TRR" + UserControl2.dimensions.Width + "'";
+            command.ExecuteNonQuery();
+
+            // delete CrossbarAv
+            command.CommandText = "UPDATE TraverseAv SET Enstock = Enstock - 1 " +
+                "WHERE PK_TraverseAv = 'TRF" + UserControl2.dimensions.Width + "'";
+            command.ExecuteNonQuery();
+
+            // delete CrossbarGD
+            command.CommandText = "UPDATE TraverseGD SET Enstock = Enstock - 2 " +
+                "WHERE PK_TraverseGD = 'TRG" + UserControl2.dimensions.Depth + "'";
+            command.ExecuteNonQuery();
+
+            // delete doors
+            if (casier.Value.Door != null)
+            {
+                switch (casier.Value.Door.Color)
                 {
-                    int retrait = Convert.ToInt32(reader["Enstock"].ToString());
-                    retrait = Convert.ToInt32(reader["Enstock"].ToString()) - 1;
-                    reader["Enstock"] = Convert.ToString(retrait);
+                    case "Blanc":
+                        casier.Value.Door.Color = "BL";
+                        break;
+                    case "Verre":
+                        casier.Value.Door.Color = "VE";
+                        break;
+                    case "Brun":
+                        casier.Value.Door.Color = "BR";
+                        break;
                 }
+                command.CommandText = "UPDATE Porte SET Enstock = Enstock - 1 " +
+                "WHERE PK_Porte = 'POR" + UserControl2.dimensions.Height + UserControl2.dimensions.Width + casier.Value.Door.Color + "'";
+                command.ExecuteNonQuery();
             }
         }
-    }*/
+
+        // delete Angle_irons
+        command.CommandText = "UPDATE Corniere SET Enstock = Enstock - 4 " +
+            "WHERE PK_Cornieres = 'COR" + H_Angle + UserControl2.color_Angle + "'";
+        command.ExecuteNonQuery();
+
+        connection.Close();
+    }
 }

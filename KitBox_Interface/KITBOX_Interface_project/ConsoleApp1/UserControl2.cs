@@ -8,6 +8,7 @@ namespace ConsoleApp1
     public partial class UserControl2 : UserControl
     {
         //declaration of variables
+        public static String color_Angle;
         public static Dictionary<string, Rack> command = new Dictionary<string, Rack>();//declaration of rack
         public static int widthValue;
         public static int depthValue;
@@ -59,14 +60,18 @@ namespace ConsoleApp1
             //Object Dimensions
             dimensions = new Dimensions(0, widthValue, depthValue);
 
-            if (!widthValue.Equals(0) && !depthValue.Equals(0))
+            // Color of Angle irons
+            Object selectedColor_AngleBox = Color_Angle.SelectedItem;
+            color_Angle = Convert.ToString(selectedColor_AngleBox);
+
+            if (!widthValue.Equals(0) && !depthValue.Equals(0) && !color_Angle.Equals(""))
             {
                 this.BackgroundImage = null;
                 this.Controls.Clear();
                 this.Controls.Add(new InterfaceCasier1());
             }
             else
-                MessageBox.Show("Veuillez entrez la largeur et la profondeur de votre armoire", "Erreur",
+                MessageBox.Show("Veuillez entrez la largeur, la profondeur de votre armoire et la couleur de votre cornière", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }

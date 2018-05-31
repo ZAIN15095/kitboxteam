@@ -36,13 +36,14 @@ namespace ConsoleApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
+            broker.deleteDoor();
             List<String> dataList = broker.viewData();
 
             foreach (string elemt in dataList)
             {
                 OrderText.Text += elemt;
             }
-            //broker.deleteDoor();
+            
 
         }
 

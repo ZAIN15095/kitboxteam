@@ -40,6 +40,8 @@
             this.depth = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.Color_Angle = new System.Windows.Forms.ComboBox();
+            this.Irons_color = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -114,6 +116,7 @@
             this.width.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.width.FormattingEnabled = true;
             this.width.Items.AddRange(new object[] {
+            "32",
             "42",
             "53",
             "45"});
@@ -208,11 +211,40 @@
             this.label5.TabIndex = 25;
             this.label5.Text = "Next";
             // 
+            // Color_Angle
+            // 
+            this.Color_Angle.BackColor = System.Drawing.SystemColors.Window;
+            this.Color_Angle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Color_Angle.FormattingEnabled = true;
+            this.Color_Angle.Items.AddRange(new object[] {
+            "Blanc",
+            "Brun",
+            "Galvanisé",
+            "Noir",
+            "Verre"});
+            this.Color_Angle.Location = new System.Drawing.Point(765, 339);
+            this.Color_Angle.Name = "Color_Angle";
+            this.Color_Angle.Size = new System.Drawing.Size(143, 21);
+            this.Color_Angle.TabIndex = 26;
+            // 
+            // Irons_color
+            // 
+            this.Irons_color.AutoSize = true;
+            this.Irons_color.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Irons_color.ForeColor = System.Drawing.Color.Maroon;
+            this.Irons_color.Location = new System.Drawing.Point(566, 339);
+            this.Irons_color.Name = "Irons_color";
+            this.Irons_color.Size = new System.Drawing.Size(182, 23);
+            this.Irons_color.TabIndex = 27;
+            this.Irons_color.Text = "Angle irons Color";
+            // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
+            this.Controls.Add(this.Irons_color);
+            this.Controls.Add(this.Color_Angle);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.depth);
@@ -225,6 +257,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
+            this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.Name = "UserControl2";
             this.Size = new System.Drawing.Size(1038, 512);
             this.Load += new System.EventHandler(this.UserControl2_Load);
@@ -246,5 +279,7 @@
         private System.Windows.Forms.ComboBox depth;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox Color_Angle;
+        private System.Windows.Forms.Label Irons_color;
     }
 }
