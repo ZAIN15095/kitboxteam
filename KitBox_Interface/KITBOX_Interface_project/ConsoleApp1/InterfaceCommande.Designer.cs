@@ -79,11 +79,13 @@
             office2010Blue1.SelectedTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(57)))), ((int)(((byte)(91)))));
             office2010Blue1.TextColor = System.Drawing.Color.White;
             this.Submit.ColorTable = office2010Blue1;
-            this.Submit.Location = new System.Drawing.Point(889, 445);
+            this.Submit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.Submit.Image = global::ConsoleApp1.Properties.Resources.Redo_52px1;
+            this.Submit.Location = new System.Drawing.Point(856, 444);
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(85, 38);
             this.Submit.TabIndex = 74;
-            this.Submit.Text = "Submit";
+            this.Submit.Text = "Confirmer";
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
@@ -103,6 +105,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Submit);
             this.Controls.Add(this.label6);

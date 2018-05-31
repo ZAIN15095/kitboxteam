@@ -81,8 +81,6 @@
             this.DoorColorText.Items.AddRange(new object[] {
             "Blanc",
             "Brun",
-            "Galvanisé",
-            "Noir",
             "Verre"});
             this.DoorColorText.Location = new System.Drawing.Point(783, 290);
             this.DoorColorText.Name = "DoorColorText";

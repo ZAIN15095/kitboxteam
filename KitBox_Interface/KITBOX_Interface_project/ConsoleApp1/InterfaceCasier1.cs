@@ -84,13 +84,13 @@ namespace ConsoleApp1
             // creating objects
             panelColor = PanelColorText.Text;
             udpanel = new UDpanel(panelColor, UserControl2.dimensions);
-            backPanel = new BackPanel(panelColor, UserControl2.dimensions);
+            backPanel = new BackPanel(heightValue, panelColor, UserControl2.dimensions);
             bcrossbar = new BCrossbar(UserControl2.dimensions);
             fcrossbar = new FCrossbar(UserControl2.dimensions);
             lrcrossbar = new LRcrossbar(UserControl2.dimensions);
             anglebar = new AngleBar(panelColor, UserControl2.dimensions);
-            lrpanel = new LRpanel(panelColor, UserControl2.dimensions);
-            battens = new Battens(UserControl2.dimensions);
+            lrpanel = new LRpanel(heightValue, panelColor, UserControl2.dimensions);
+            battens = new Battens(heightValue, UserControl2.dimensions);
             
         }
 
@@ -117,7 +117,7 @@ namespace ConsoleApp1
                 if (DoorSelect.Checked)
                 {
                     doorColor = DoorColorText.Text;
-                    door = new Door(doorColor, UserControl2.dimensions);
+                    door = new Door(heightValue, doorColor, UserControl2.dimensions);
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
 
@@ -164,7 +164,7 @@ namespace ConsoleApp1
                 if (DoorSelect.Checked)
                 {
                     doorColor = DoorColorText.Text;
-                    door = new Door(doorColor, UserControl2.dimensions);
+                    door = new Door(heightValue, doorColor, UserControl2.dimensions);
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
 

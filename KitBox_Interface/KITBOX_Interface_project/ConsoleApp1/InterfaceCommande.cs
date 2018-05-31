@@ -36,13 +36,13 @@ namespace ConsoleApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            broker.deleteDoor();
-            List<String> dataList = broker.viewData();
+            broker.deleteItems();
+            /*List<String> dataList = broker.viewData();
 
             foreach (string elemt in dataList)
             {
                 OrderText.Text += elemt;
-            }
+            }*/
             
 
         }
@@ -54,7 +54,7 @@ namespace ConsoleApp1
                 OrderText.Text += "\t\t" + casier.Key + "\r\n";
                 OrderText.AppendText("\r\n");
 
-                OrderText.Text += "Hauteur :\t\t\t" + UserControl2.dimensions.Height + "\r\n";
+                OrderText.Text += "Hauteur :\t\t\t" + casier.Value.Lrpanel.Height + "\r\n";
                 OrderText.Text += "Largeur :\t\t\t" + UserControl2.dimensions.Width + "\r\n";
                 OrderText.Text += "Profondeur\t\t" + UserControl2.dimensions.Depth + "\r\n";
                 OrderText.Text += "Couleur des panneaux :\t" + casier.Value.Lrpanel.Color + "\r\n";

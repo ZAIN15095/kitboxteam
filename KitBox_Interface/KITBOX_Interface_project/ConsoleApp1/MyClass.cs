@@ -78,20 +78,22 @@ namespace KITBOX_project
 			set { color = value; }
 		}
 
-        public int Height
+        public virtual int Height
         {
             get { return dimensions.Height; }
+            set { dimensions.Height = value; }
         }
 
         public int Width
         {
             get { return dimensions.Width; }
+            set { dimensions.Width = value; }
         }
 
         public int Depth
         {
             get { return dimensions.Depth; }
-
+            set { dimensions.Depth = value; }
         }
 
         public override string ToString()
@@ -105,10 +107,12 @@ namespace KITBOX_project
 
     public class Battens : Item
     {
+        string code;
+        int height;
         private static readonly String name = "Tasseau";
 
-        public Battens( Dimensions dimensions, string color = null) : base(color, dimensions)
-        { }
+        public Battens(int height, Dimensions dimensions, string color = null) : base(color, dimensions)
+        { this.height = height; }
 
         public override string ToString()
         {
@@ -120,22 +124,28 @@ namespace KITBOX_project
         }
         public string Code()
         {
-            if (dimensions.Height == 32)
+            if (this.height == 32)
             {
-                return "TAS27";
+                code = "'TAS27'";
 
             }
-            if (dimensions.Height == 42)
+            if (this.height == 42)
             {
-                return "TAS37";
+                code = "'TAS37'";
 
             }
-            if (dimensions.Height == 62)
+            if (this.height == 52)
             {
-                return "TAS47";
+                code = "'TAS47'";
 
             }
-            return null;
+            return code;
+        }
+
+        public override int Height
+        {
+            get { return this.height; }
+            set { this.height = value; }
         }
 
     }
@@ -143,15 +153,23 @@ namespace KITBOX_project
 
 	public class LRpanel : Item
 	{
+        string code;
+        int height;
         private static readonly String name = "Panneau GD";
 
-        public LRpanel(string color, Dimensions dimensions) : base(color, dimensions)
-        { }
+        public LRpanel(int height, string color, Dimensions dimensions) : base(color, dimensions)
+        { this.height = height; }
 
         public override string Color
         {
             get { return color; }
             set { color = value; }
+        }
+
+        public override int Height
+        {
+            get { return this.height; }
+            set { this.height = value; }
         }
 
         public override string ToString()
@@ -164,24 +182,23 @@ namespace KITBOX_project
         }
         public string Code()
         {
-            if(color == "BRUN")
+            if(color == "Brun")
             {
-                string Code = "PAG" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Depth)+"BR";
-                return Code;
+                code = "'PAG" + this.height + dimensions.Depth+ "BR'";
             }
-            if (color == "BLANC")
+            if (color == "Blanc")
             {
-                string Code = "PAG" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Depth) + "BL";
-                return Code;
+                code = "'PAG" + this.height + dimensions.Depth + "BL'";
             }
 
-            return null;
+            return code;
         }
          
     }
 
     public class UDpanel : Item
 	{
+        string code;
         private static readonly String name = "Panneau HB";
 
         public UDpanel(string color , Dimensions dimensions) : base(color , dimensions)
@@ -197,29 +214,30 @@ namespace KITBOX_project
         }
         public string Code()
         {
-            if (color == "BRUN")
+            if (color == "Brun")
             {
-                string Code = "PAH" + Convert.ToString(dimensions.Depth) + Convert.ToString(dimensions.Width) + "BR";
-                return Code;
+                code = "'PAH" + dimensions.Depth + dimensions.Width + "BR'";
             }
-            if (color == "BLANC")
+            if (color == "Blanc")
             {
-                string Code = "PAH" + Convert.ToString(dimensions.Depth) + Convert.ToString(dimensions.Width) + "BL";
-                return Code;
+                code = "'PAH" + dimensions.Depth + dimensions.Width + "BL'";
             }
 
-            return null;
+            return code;
         }
+
 
 
     }
 
 	public class BackPanel : Item
     {
+        string code;
+        int height;
         private static readonly String name = "Panneau Ar";
 
-        public BackPanel(string color, Dimensions dimensions) : base(color , dimensions)
-        { }
+        public BackPanel(int height, string color, Dimensions dimensions) : base(color , dimensions)
+        { this.height = height; }
 
         public override string ToString()
         {
@@ -229,27 +247,31 @@ namespace KITBOX_project
         {
             get { return name; }
         }
+
+        public override int Height
+        {
+            get { return this.height; }
+            set { this.height = value; }
+        }
+
         public string Code()
         {
-            if (color == "BRUN")
+            if (color == "Brun")
             {
-                string Code = "PAR" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Width) + "BR";
-                return Code;
+               code = "'PAR" + this.height + dimensions.Width + "BR'";
             }
-            if (color == "BLANC")
+            if (color == "Blanc")
             {
-                string Code = "PAR" + Convert.ToString(dimensions.Height) + Convert.ToString(dimensions.Width) + "BL";
-                return Code;
+                code = "'PAR" + this.height + dimensions.Width + "BL'";
             }
 
-            return null;
+            return code;
         }
 
 
     }
 
     public class BCrossbar : Item
-
     {
         private static readonly String name = "Traverse Ar";
 
@@ -266,7 +288,7 @@ namespace KITBOX_project
         }
         public string Code()
         {
-            string code = "TRR" + Convert.ToString(dimensions.Width);
+            string code = "'TRR" + dimensions.Width + "'";
             return code;
         }
 
@@ -289,6 +311,12 @@ namespace KITBOX_project
             get { return name; }
         }
 
+        public string Code()
+        {
+            string code = "'TRF" + dimensions.Width + "'";
+            return code;
+        }
+
     }
 
     public class LRcrossbar : Item
@@ -306,23 +334,57 @@ namespace KITBOX_project
         {
             get { return name; }
         }
-        
+
+        public string Code()
+        {
+            string code = "'TRG" + dimensions.Depth + "'";
+            return code;
+        }
+
 
 
     }
 
     public class Door : Item
 	{
+        string code;
+        int height;
         private static readonly String name = "Porte";
 
-        public Door(string color , Dimensions dimensions) : base(color , dimensions)
-        { }
+        public Door(int height, string color , Dimensions dimensions) : base(color , dimensions)
+        { this.height = height; }
 
         public override string Color
         {
             get { return color; }
             set { color = value; }
         }
+
+        public override int Height
+        {
+            get { return this.height; }
+            set { this.height = value; }
+        }
+
+        public string Code()
+        {
+            if (color == "Brun")
+            {
+                code = "'POR" + this.height + dimensions.Width + "BR'";
+            }
+
+            if (color == "Verre")
+            {
+                 code = "'POR" + this.height + dimensions.Width + "VE'";
+            }
+            if (color == "Blanc")
+            {
+                code = "'POR" + this.height + dimensions.Width + "BL'";
+            }
+
+            return code;
+        }
+
 
         public override string ToString()
         {
@@ -350,6 +412,7 @@ namespace KITBOX_project
             get { return name; }
         }
     }
+
 	// class qui regroupe les proprietes du casier et permet de les modifier
 	public class Rack
 	{
@@ -503,7 +566,7 @@ public class Broker
     }
 
     // delete elements from data base
-    public void deleteDoor()
+    public void deleteItems()
     {
         switch (UserControl2.color_Angle)
         {
@@ -524,73 +587,53 @@ public class Broker
                 break;
         }
 
-        int H_Angle = 0;
+        int H_Angle = 0; // Height of Angle irons
         connection.Open();
 
         foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
         {
             H_Angle += UserControl2.dimensions.Height + 4;
 
-            switch (casier.Value.Lrpanel.Color)
-            {
-                case "Blanc":
-                    casier.Value.Lrpanel.Color = "BL";
-                    break;
-                case "Verre":
-                    casier.Value.Lrpanel.Color = "VE";
-                    break;
-                case "Brun":
-                    casier.Value.Lrpanel.Color = "BR";
-                    break;
-            }
-
             //delete PanelAR
             command.CommandText = "UPDATE PanneauAr SET Enstock = Enstock - 1 " +
-                "WHERE Champ1 = 'PAR" + UserControl2.dimensions.Height + UserControl2.dimensions.Width + casier.Value.Lrpanel.Color + "'";
+                "WHERE Champ1 = " + casier.Value.Backpanel.Code();
             command.ExecuteNonQuery();
 
             // delete panelGD
             command.CommandText = "UPDATE PanneauGD SET Enstock = Enstock - 2 " +
-                "WHERE PK_PanneauGD = 'PAG" + UserControl2.dimensions.Height + UserControl2.dimensions.Depth + casier.Value.Lrpanel.Color + "'";
+                "WHERE PK_PanneauGD = " + casier.Value.Lrpanel.Code();
             command.ExecuteNonQuery();
 
             // delete panelHB
             command.CommandText = "UPDATE PanneauHB SET Enstock = Enstock - 2 " +
-                "WHERE PK_PanneauHB = 'PAH" + UserControl2.dimensions.Height + UserControl2.dimensions.Depth + casier.Value.Lrpanel.Color + "'";
+                "WHERE PK_PanneauHB = " + casier.Value.Udpanel.Code();
             command.ExecuteNonQuery();
 
             // delete CrossbarAr
             command.CommandText = "UPDATE TraverseAr SET Enstock = Enstock - 1 " +
-                "WHERE PK_TraverseAr = 'TRR" + UserControl2.dimensions.Width + "'";
+                "WHERE PK_TraverseAr = " + casier.Value.Bcrossbar.Code();
             command.ExecuteNonQuery();
 
             // delete CrossbarAv
             command.CommandText = "UPDATE TraverseAv SET Enstock = Enstock - 1 " +
-                "WHERE PK_TraverseAv = 'TRF" + UserControl2.dimensions.Width + "'";
+                "WHERE PK_TraverseAv = " + casier.Value.Fcrossbar.Code();
             command.ExecuteNonQuery();
 
             // delete CrossbarGD
             command.CommandText = "UPDATE TraverseGD SET Enstock = Enstock - 2 " +
-                "WHERE PK_TraverseGD = 'TRG" + UserControl2.dimensions.Depth + "'";
+                "WHERE PK_TraverseGD = " + casier.Value.Lrcrossbar.Code();
+            command.ExecuteNonQuery();
+
+            //delete battens
+            command.CommandText = "UPDATE Tasseau SET Enstock = Enstock - 4 " +
+            "WHERE PK_Tasseau = " + casier.Value.BAttens.Code();
             command.ExecuteNonQuery();
 
             // delete doors
             if (casier.Value.Door != null)
             {
-                switch (casier.Value.Door.Color)
-                {
-                    case "Blanc":
-                        casier.Value.Door.Color = "BL";
-                        break;
-                    case "Verre":
-                        casier.Value.Door.Color = "VE";
-                        break;
-                    case "Brun":
-                        casier.Value.Door.Color = "BR";
-                        break;
-                }
                 command.CommandText = "UPDATE Porte SET Enstock = Enstock - 1 " +
-                "WHERE PK_Porte = 'POR" + UserControl2.dimensions.Height + UserControl2.dimensions.Width + casier.Value.Door.Color + "'";
+                "WHERE PK_Porte = " + casier.Value.Door.Code();
                 command.ExecuteNonQuery();
             }
         }

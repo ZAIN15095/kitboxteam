@@ -118,8 +118,11 @@
             this.width.Items.AddRange(new object[] {
             "32",
             "42",
-            "53",
-            "45"});
+            "52",
+            "62",
+            "80",
+            "100",
+            "120"});
             this.width.Location = new System.Drawing.Point(765, 163);
             this.width.Name = "width";
             this.width.Size = new System.Drawing.Size(143, 31);
@@ -179,10 +182,7 @@
             "32",
             "42",
             "52",
-            "62",
-            "80",
-            "100",
-            "120"});
+            "62"});
             this.depth.Location = new System.Drawing.Point(765, 254);
             this.depth.Name = "depth";
             this.depth.Size = new System.Drawing.Size(143, 31);
@@ -214,7 +214,9 @@
             // Color_Angle
             // 
             this.Color_Angle.BackColor = System.Drawing.SystemColors.Window;
+            this.Color_Angle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Color_Angle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Color_Angle.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Color_Angle.FormattingEnabled = true;
             this.Color_Angle.Items.AddRange(new object[] {
             "Blanc",
@@ -224,12 +226,13 @@
             "Verre"});
             this.Color_Angle.Location = new System.Drawing.Point(765, 339);
             this.Color_Angle.Name = "Color_Angle";
-            this.Color_Angle.Size = new System.Drawing.Size(143, 21);
+            this.Color_Angle.Size = new System.Drawing.Size(143, 31);
             this.Color_Angle.TabIndex = 26;
             // 
             // Irons_color
             // 
             this.Irons_color.AutoSize = true;
+            this.Irons_color.BackColor = System.Drawing.Color.Transparent;
             this.Irons_color.Font = new System.Drawing.Font("Rockwell", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Irons_color.ForeColor = System.Drawing.Color.Maroon;
             this.Irons_color.Location = new System.Drawing.Point(566, 339);
