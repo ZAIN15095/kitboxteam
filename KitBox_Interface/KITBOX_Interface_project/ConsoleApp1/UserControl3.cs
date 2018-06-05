@@ -51,41 +51,51 @@ namespace ConsoleApp1
 
         private void xButton1_Click(object sender, EventArgs e)
         {
-                try
+            try
+            {              
+                if (Login.Text == "groupe4")
                 {
+                    if ( Mdp.Text == "123")
+                    {
+                        this.BackgroundImage = null;
+                        this.Controls.Clear();
+                        this.Controls.Add(new InterfaceManager());
+                    }
 
-
-                    SqlConnection con = new SqlConnection("server=ZA;database=LOGIN;Integrated Security=true");
-                    SqlCommand conn = new SqlCommand("SELECT * FROM log WHERE USERNAME=@user and PASSWORD=@pw", con);
-                    con.Open();
-                    conn.Parameters.AddWithValue("@user", textBox1.Text);
-                    conn.Parameters.AddWithValue("@pw", textBox2.Text);
-                    SqlDataReader Dr = conn.ExecuteReader();
-
-                    Form4 f4 = new Form4();
-                    f4.Show();
-                    Form2 f2 = new Form2();
-                    f2.Close();
-
-
+                    else
+                    {
+                        LoginI.Visible = false;
+                        MdpI.Visible = true;
+                        Mdp.Clear();
+                    }
+                }
+                else
+                {
+                    LoginI.Visible = true;
+                    Login.Clear();
+                    Mdp.Clear();
+                }
             }
 
             catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-
-            
+            {
+                MessageBox.Show(ex.Message.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new Home());
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UserControl3_Load(object sender, EventArgs e)
         {
 
         }

@@ -88,7 +88,7 @@ namespace ConsoleApp1
             bcrossbar = new BCrossbar(UserControl2.dimensions);
             fcrossbar = new FCrossbar(UserControl2.dimensions);
             lrcrossbar = new LRcrossbar(UserControl2.dimensions);
-            anglebar = new AngleBar(panelColor, UserControl2.dimensions);
+            anglebar = new AngleBar(UserControl2.color_Angle, UserControl2.dimensions);
             lrpanel = new LRpanel(heightValue, panelColor, UserControl2.dimensions);
             battens = new Battens(heightValue, UserControl2.dimensions);
             

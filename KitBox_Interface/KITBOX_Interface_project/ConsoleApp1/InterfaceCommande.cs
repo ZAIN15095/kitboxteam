@@ -15,7 +15,6 @@ namespace ConsoleApp1
 {
     public partial class InterfaceCommande : UserControl
     {
-
         Broker broker = new Broker();
 
         public InterfaceCommande()
@@ -36,14 +35,9 @@ namespace ConsoleApp1
 
         private void Submit_Click(object sender, EventArgs e)
         {
-            broker.deleteItems();
-            /*List<String> dataList = broker.viewData();
-
-            foreach (string elemt in dataList)
-            {
-                OrderText.Text += elemt;
-            }*/
-            
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfacePayment());
 
         }
 

@@ -102,6 +102,11 @@ namespace KITBOX_project
 
 		}
 
+        public virtual string Code()
+        {
+            return null;
+        }
+
 
 	}
 
@@ -109,7 +114,7 @@ namespace KITBOX_project
     {
         string code;
         int height;
-        private static readonly String name = "Tasseau";
+        private static readonly String name = "Tasseaux";
 
         public Battens(int height, Dimensions dimensions, string color = null) : base(color, dimensions)
         { this.height = height; }
@@ -122,7 +127,7 @@ namespace KITBOX_project
         {
             get { return name; }
         }
-        public string Code()
+        public override string Code()
         {
             if (this.height == 32)
             {
@@ -155,7 +160,7 @@ namespace KITBOX_project
 	{
         string code;
         int height;
-        private static readonly String name = "Panneau GD";
+        private static readonly String name = "Panneaux Gauche/Droite";
 
         public LRpanel(int height, string color, Dimensions dimensions) : base(color, dimensions)
         { this.height = height; }
@@ -180,7 +185,7 @@ namespace KITBOX_project
         {
             get { return name; }
         }
-        public string Code()
+        public override string Code()
         {
             if(color == "Brun")
             {
@@ -199,7 +204,7 @@ namespace KITBOX_project
     public class UDpanel : Item
 	{
         string code;
-        private static readonly String name = "Panneau HB";
+        private static readonly String name = "Panneaux Haut/Bas";
 
         public UDpanel(string color , Dimensions dimensions) : base(color , dimensions)
         { }
@@ -212,7 +217,7 @@ namespace KITBOX_project
         {
             get { return name; }
         }
-        public string Code()
+        public override string Code()
         {
             if (color == "Brun")
             {
@@ -234,7 +239,7 @@ namespace KITBOX_project
     {
         string code;
         int height;
-        private static readonly String name = "Panneau Ar";
+        private static readonly String name = "Panneau Arrière";
 
         public BackPanel(int height, string color, Dimensions dimensions) : base(color , dimensions)
         { this.height = height; }
@@ -254,7 +259,7 @@ namespace KITBOX_project
             set { this.height = value; }
         }
 
-        public string Code()
+        public override string Code()
         {
             if (color == "Brun")
             {
@@ -273,7 +278,7 @@ namespace KITBOX_project
 
     public class BCrossbar : Item
     {
-        private static readonly String name = "Traverse Ar";
+        private static readonly String name = "Traverse Arrière";
 
         public BCrossbar(Dimensions dimensions,string color = null) : base(color, dimensions)
         { }
@@ -286,7 +291,7 @@ namespace KITBOX_project
         {
             get { return name; }
         }
-        public string Code()
+        public override string Code()
         {
             string code = "'TRR" + dimensions.Width + "'";
             return code;
@@ -297,7 +302,7 @@ namespace KITBOX_project
     public class FCrossbar : Item
 
     {
-        private static readonly String name = "Traverse Av";
+        private static readonly String name = "Traverse Avant";
 
         public FCrossbar(Dimensions dimensions , string color = null) : base(color, dimensions)
         { }
@@ -311,7 +316,7 @@ namespace KITBOX_project
             get { return name; }
         }
 
-        public string Code()
+        public override string Code()
         {
             string code = "'TRF" + dimensions.Width + "'";
             return code;
@@ -321,7 +326,7 @@ namespace KITBOX_project
 
     public class LRcrossbar : Item
     {
-        private static readonly String name = "Traverse GD";
+        private static readonly String name = "Traverse Gauche/Droite";
 
         public LRcrossbar( Dimensions dimensions , string color = null) : base(color, dimensions)
         { }
@@ -335,7 +340,7 @@ namespace KITBOX_project
             get { return name; }
         }
 
-        public string Code()
+        public override string Code()
         {
             string code = "'TRG" + dimensions.Depth + "'";
             return code;
@@ -366,7 +371,7 @@ namespace KITBOX_project
             set { this.height = value; }
         }
 
-        public string Code()
+        public override string Code()
         {
             if (color == "Brun")
             {
@@ -514,6 +519,8 @@ public class Broker
 {
     OleDbConnection connection;
     OleDbCommand command;
+    string prix_unitaire;
+    string available;
     //Rack item;
     private void connectTo()
     {
@@ -596,53 +603,115 @@ public class Broker
 
             //delete PanelAR
             command.CommandText = "UPDATE PanneauAr SET Enstock = Enstock - 1 " +
-                "WHERE Champ1 = " + casier.Value.Backpanel.Code();
+                "WHERE code = " + casier.Value.Backpanel.Code();
             command.ExecuteNonQuery();
 
             // delete panelGD
             command.CommandText = "UPDATE PanneauGD SET Enstock = Enstock - 2 " +
-                "WHERE PK_PanneauGD = " + casier.Value.Lrpanel.Code();
+                "WHERE code = " + casier.Value.Lrpanel.Code();
             command.ExecuteNonQuery();
 
             // delete panelHB
             command.CommandText = "UPDATE PanneauHB SET Enstock = Enstock - 2 " +
-                "WHERE PK_PanneauHB = " + casier.Value.Udpanel.Code();
+                "WHERE code = " + casier.Value.Udpanel.Code();
             command.ExecuteNonQuery();
 
             // delete CrossbarAr
             command.CommandText = "UPDATE TraverseAr SET Enstock = Enstock - 1 " +
-                "WHERE PK_TraverseAr = " + casier.Value.Bcrossbar.Code();
+                "WHERE code = " + casier.Value.Bcrossbar.Code();
             command.ExecuteNonQuery();
 
             // delete CrossbarAv
             command.CommandText = "UPDATE TraverseAv SET Enstock = Enstock - 1 " +
-                "WHERE PK_TraverseAv = " + casier.Value.Fcrossbar.Code();
+                "WHERE code = " + casier.Value.Fcrossbar.Code();
             command.ExecuteNonQuery();
 
             // delete CrossbarGD
             command.CommandText = "UPDATE TraverseGD SET Enstock = Enstock - 2 " +
-                "WHERE PK_TraverseGD = " + casier.Value.Lrcrossbar.Code();
+                "WHERE code = " + casier.Value.Lrcrossbar.Code();
             command.ExecuteNonQuery();
 
             //delete battens
             command.CommandText = "UPDATE Tasseau SET Enstock = Enstock - 4 " +
-            "WHERE PK_Tasseau = " + casier.Value.BAttens.Code();
+            "WHERE code = " + casier.Value.BAttens.Code();
             command.ExecuteNonQuery();
 
             // delete doors
             if (casier.Value.Door != null)
             {
                 command.CommandText = "UPDATE Porte SET Enstock = Enstock - 1 " +
-                "WHERE PK_Porte = " + casier.Value.Door.Code();
+                "WHERE code = " + casier.Value.Door.Code();
                 command.ExecuteNonQuery();
             }
         }
 
         // delete Angle_irons
         command.CommandText = "UPDATE Corniere SET Enstock = Enstock - 4 " +
-            "WHERE PK_Cornieres = 'COR" + H_Angle + UserControl2.color_Angle + "'";
+            "WHERE code = 'COR" + H_Angle + UserControl2.color_Angle + "'";
         command.ExecuteNonQuery();
 
         connection.Close();
     }
+
+    public string printPrice(KITBOX_project.Item item, string table)
+    {
+        connection.Open();
+
+        string code_item = item.Code();
+
+        command.CommandText = "SELECT * FROM " + table +
+            " WHERE code = " + code_item;
+        command.CommandType = CommandType.Text;
+
+        OleDbDataReader reader = command.ExecuteReader();
+
+        while (reader.Read())
+        {
+            prix_unitaire = reader["PrixClient"].ToString();
+        }
+        connection.Close();
+
+        return prix_unitaire;
+    }
+
+    // Available
+    public string Available(KITBOX_project.Item item, string table)
+    {
+        connection.Open();
+
+        int stock; 
+        string code_item = item.Code();
+
+        command.CommandText = "SELECT * FROM " + table +
+            " WHERE code = " + code_item;
+        command.CommandType = CommandType.Text;
+
+        OleDbDataReader reader = command.ExecuteReader();
+
+        while (reader.Read())
+        {
+            stock = Convert.ToInt32(reader["Enstock"].ToString());
+
+            if(stock > 0)
+            {
+                available = "OUI";
+            }
+            else
+            {
+                available = "NON";
+            }
+
+        }
+        connection.Close();
+        return available;
+    }
+
+    /*public string SearchCommande(string Name)
+    {
+        connection.Open();
+
+        command.CommandText = "SELECT * FROM Commande";
+        command.ExecuteNonQuery();
+
+    }*/
 }

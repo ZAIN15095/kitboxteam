@@ -143,6 +143,30 @@
     <Compile Include="InterfaceCommande.Designer.cs">
       <DependentUpon>InterfaceCommande.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceConfirm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceConfirm.Designer.cs">
+      <DependentUpon>InterfaceConfirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceManager.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceManager.Designer.cs">
+      <DependentUpon>InterfaceManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfacePayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfacePayment.Designer.cs">
+      <DependentUpon>InterfacePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceSearchOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceSearchOrder.Designer.cs">
+      <DependentUpon>InterfaceSearchOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
@@ -225,6 +249,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceCommande.resx">
       <DependentUpon>InterfaceCommande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceConfirm.resx">
+      <DependentUpon>InterfaceConfirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceManager.resx">
+      <DependentUpon>InterfaceManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfacePayment.resx">
+      <DependentUpon>InterfacePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceSearchOrder.resx">
+      <DependentUpon>InterfaceSearchOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

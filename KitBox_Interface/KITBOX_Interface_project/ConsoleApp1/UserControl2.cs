@@ -49,6 +49,8 @@ namespace ConsoleApp1
 
         private void NextButton_Click(object sender, EventArgs e)
         {
+            // color
+            color_Angle = Color_Angle.Text;
             //width value
             Object selectedWithBox = width.SelectedItem;
             widthValue = Convert.ToInt32(selectedWithBox);

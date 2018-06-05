@@ -20,12 +20,9 @@ namespace ConsoleApp1
         //Service for the storekeeper
         private void Service(object sender, EventArgs e)
         {
-                Form2 f2 = new Form2();
-                f2.Show();
-                Form1 f1 = new Form1();
-                f1.Close();
-
-
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new UserControl3());
         }
 
         //begin the order
