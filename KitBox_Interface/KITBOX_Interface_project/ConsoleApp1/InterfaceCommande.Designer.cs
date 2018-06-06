@@ -111,7 +111,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.OrderText);
             this.Name = "InterfaceCommande";
-            this.Size = new System.Drawing.Size(1039, 498);
+            this.Size = new System.Drawing.Size(1024, 512);
             this.Load += new System.EventHandler(this.InterfaceCommande_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

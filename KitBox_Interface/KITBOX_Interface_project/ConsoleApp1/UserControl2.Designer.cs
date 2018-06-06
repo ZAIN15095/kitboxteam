@@ -35,7 +35,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.width = new System.Windows.Forms.ComboBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.depth = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -144,20 +143,6 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.BackButton_Click);
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::ConsoleApp1.Properties.Resources.Info_50px;
-            this.button2.Location = new System.Drawing.Point(859, 7);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 48);
-            this.button2.TabIndex = 19;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button_Help);
-            // 
             // Cancel
             // 
             this.Cancel.BackColor = System.Drawing.Color.Transparent;
@@ -252,7 +237,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.depth);
             this.Controls.Add(this.Cancel);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.width);
             this.Controls.Add(this.label2);
@@ -262,7 +246,7 @@
             this.Controls.Add(this.label1);
             this.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.Name = "UserControl2";
-            this.Size = new System.Drawing.Size(1038, 512);
+            this.Size = new System.Drawing.Size(1024, 512);
             this.Load += new System.EventHandler(this.UserControl2_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -277,7 +261,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox width;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button Cancel;
         private System.Windows.Forms.ComboBox depth;
         private System.Windows.Forms.Label label4;

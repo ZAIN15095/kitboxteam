@@ -131,7 +131,7 @@ namespace ConsoleApp1
                     }
                     else
                     {
-                        MessageBox.Show("Veuillez choisir la couleur de la porte de votre casier", "Erreur",
+                        MessageBox.Show("Please choose the color of your rack's door", "Erreur",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -148,7 +148,7 @@ namespace ConsoleApp1
             }
             else
             {
-                MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
+                MessageBox.Show("Please enter the height and the color of your panel's rack", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -178,7 +178,7 @@ namespace ConsoleApp1
                     }
                     else
                     {
-                        MessageBox.Show("Veuillez choisir la couleur de la porte de votre casier", "Erreur",
+                        MessageBox.Show("Please choose the color of your rack's door", "Erreur",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
@@ -196,7 +196,7 @@ namespace ConsoleApp1
 
             }
             else
-                MessageBox.Show("Veuillez entrez la hauteur et la color des panneaux de votre casier", "Erreur",
+                MessageBox.Show("Please enter the height and the color of your panel's rack", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }

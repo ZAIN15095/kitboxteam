@@ -14,9 +14,9 @@ namespace ConsoleApp1
 {
     public partial class InterfacePayment : UserControl
     {
-        //bool available = true; 
-        double price_anglebar = 0;
-        double total_price = 0;
+        bool available = false;
+        // double price_anglebar = 0;
+        public static double total_price = 0;
         Broker broker = new Broker();
 
         public InterfacePayment()
@@ -27,10 +27,11 @@ namespace ConsoleApp1
         private void InterfacePayment_Load(object sender, EventArgs e)
         {
             int i = Facture.Rows.Add();
+            available = true;
             foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
             {
-                //add items's name
-                
+                //invoice
+
                 Facture.Rows[i].Cells[0].Value = casier.Key;
                 Facture.Rows[i].Cells[1].Value = "";
                 Facture.Rows[i].Cells[1].Value = "";
@@ -93,12 +94,24 @@ namespace ConsoleApp1
                     Facture.Rows[i].Cells[2].Value = Convert.ToString(Convert.ToDouble(broker.printPrice(casier.Value.Door, "Porte")) * 2);
                     Facture.Rows[i].Cells[3].Value = broker.Available(casier.Value.Door, "Porte");
                     total_price += Convert.ToDouble(broker.printPrice(casier.Value.Door, "Porte")) * 2;
+
+                    //check if door is available
+                    if(broker.Available(casier.Value.Door, "Porte") == "NON")
+                    {
+                        available = false;
+                    }
                 }
 
-                /*if (broker.Available(casier.Value.Lrpanel, "PanneauGD") == "OUI" || broker.Available(casier.Value.Lrpanel, "PanneauAR") == "OUI"
-                    || broker.Available(casier.Value.Udpanel, "PanneauHB") == "OUI" )
+                //check if items is available 
+                if (broker.Available(casier.Value.Lrpanel, "PanneauGD").Equals("NON") || broker.Available(casier.Value.Lrpanel, "PanneauAR").Equals("NON") 
+                        || broker.Available(casier.Value.Udpanel, "PanneauHB").Equals("NON") || broker.Available(casier.Value.Bcrossbar, "TraverseAr").Equals("NON") ||
+                    broker.Available(casier.Value.Fcrossbar, "TraverseAv").Equals("NON") || broker.Available(casier.Value.Lrcrossbar, "TraverseGD").Equals("NON") ||
+                    broker.Available(casier.Value.BAttens, "Tasseau").Equals("NON")) {
 
-                price_anglebar += Convert.ToDouble(broker.printPrice(casier.Value.Anglebar, "Corniere")) * 4;*/
+                    available = false;
+                } 
+
+                //price_anglebar += Convert.ToDouble(broker.printPrice(casier.Value.Anglebar, "Corniere")) * 4;
             }
 
             /*i = Facture.Rows.Add();
@@ -120,11 +133,21 @@ namespace ConsoleApp1
 
         private void Pay_Click(object sender, EventArgs e)
         {
-            broker.deleteItems();
-            UserControl2.command.Clear();
-            this.BackgroundImage = null;
-            this.Controls.Clear();
-            this.Controls.Add(new InterfaceConfirm());
+            if (available == false)
+            {
+                this.BackgroundImage = null;
+                this.Controls.Clear();
+                this.Controls.Add(new InterfaceRegisterClient());
+            }
+
+            else
+            {
+                broker.deleteItems();
+                UserControl2.command.Clear();
+                this.BackgroundImage = null;
+                this.Controls.Clear();
+                this.Controls.Add(new InterfaceConfirm());
+            }
 
         }
 

@@ -121,7 +121,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0}- heigth: {1}", Name, dimensions.Height);
+            return string.Format("{0} - height : {1}", name, height);
         }
         public String Name 
         {
@@ -179,7 +179,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0}- Heigth: {1} - Width: {2} - Color: {3} ", Name, dimensions.Height, dimensions.Width, base.color);
+            return string.Format("{0} - Heigth : {1} - Width : {2} - Color : {3} ", Name, height, dimensions.Width, base.color);
         }
         public String Name
         {
@@ -211,7 +211,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0}- Width: {1} - Deph: {2} - Color: {3} ", Name , dimensions.Width , dimensions.Depth, base.Color);
+            return string.Format("{0} - Width : {1} - Deph : {2} - Color : {3} ", name , dimensions.Width , dimensions.Depth, base.Color);
         }
         public String Name
         {
@@ -246,7 +246,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth: {1} - Width: {2} - Color: {3}", Name , dimensions.Height , dimensions.Width, base.Color );
+            return string.Format("{0} - Heigth : {1} - Width : {2} - Color : {3}", name ,height , dimensions.Width, base.Color );
         }
         public String Name
         {
@@ -285,7 +285,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Width: {1} - Colo: {2}" , Name , dimensions.Width, base.Color);
+            return string.Format("{0} - Width : {1} - Color : {2}" , name , dimensions.Width, base.Color);
         }
         public String Name
         {
@@ -309,7 +309,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Width: {1} - Color: {2}", Name, dimensions.Width, base.Color);
+            return string.Format("{0} - Width : {1} - Color : {2}", name, dimensions.Width, base.Color);
         }
         public String Name
         {
@@ -333,7 +333,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Deph: {1} - Color:  {2}", Name , dimensions.Depth , base.Color );
+            return string.Format("{0} - Depth : {1} - Color :  {2}", name , dimensions.Depth , base.Color );
         }
         public String Name
         {
@@ -393,7 +393,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth: {1} - Width {2} - Color: {3} ", Name , dimensions.Height , dimensions.Width, base.Color);
+            return string.Format("{0} - Heigth : {1} - Width {2} - Color : {3} ", name , height , dimensions.Width, base.Color);
         }
         public String Name
         {
@@ -410,7 +410,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth: {1} - Color: {2} " , Name , dimensions.Height,base.Color);
+            return string.Format("{0} - Heigth : {1} - Color : {2} " , name , Height ,base.Color);
         }
         public String Name
         {
@@ -521,6 +521,7 @@ public class Broker
     OleDbCommand command;
     string prix_unitaire;
     string available;
+    string order = null;
     //Rack item;
     private void connectTo()
     {
@@ -653,6 +654,7 @@ public class Broker
         connection.Close();
     }
 
+    //price of items
     public string printPrice(KITBOX_project.Item item, string table)
     {
         connection.Open();
@@ -674,7 +676,7 @@ public class Broker
         return prix_unitaire;
     }
 
-    // Available
+    // check Availability of items
     public string Available(KITBOX_project.Item item, string table)
     {
         connection.Open();
@@ -706,12 +708,55 @@ public class Broker
         return available;
     }
 
-    /*public string SearchCommande(string Name)
+    // insert order no finish in the database
+    public void Insert(string name, string phone, string email, double deposit, string order)
     {
         connection.Open();
 
-        command.CommandText = "SELECT * FROM Commande";
+        command.CommandText = "INSERT INTO Commande(Nom, Telephone, Email, Acompte, Commande) " +
+            "VALUES('" + name+ "', '" + phone + "', '" + email + "', '" + deposit + "', '" + order + "')";
         command.ExecuteNonQuery();
 
-    }*/
+        connection.Close();
+    }
+
+    // search order
+    public string Order(string name)
+    {
+        connection.Open();
+        try
+        {
+            command.CommandText = "SELECT * FROM Commande" +
+                " WHERE Nom = '" + name + "'";
+            command.CommandType = CommandType.Text;
+
+            OleDbDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+            {
+                order = reader["Commande"].ToString();
+            }
+
+            if (order != null)
+            {
+                return order;
+            }
+
+            else
+            {
+                return "No order exist for this client";
+            }
+
+        }
+
+        catch (Exception)
+        {
+            return "No order exist for this client";
+        }
+
+        finally
+        {
+            connection.Close();
+        }
+    }
 }

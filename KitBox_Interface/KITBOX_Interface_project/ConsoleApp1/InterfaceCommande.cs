@@ -48,19 +48,19 @@ namespace ConsoleApp1
                 OrderText.Text += "\t\t" + casier.Key + "\r\n";
                 OrderText.AppendText("\r\n");
 
-                OrderText.Text += "Hauteur :\t\t\t" + casier.Value.Lrpanel.Height + "\r\n";
-                OrderText.Text += "Largeur :\t\t\t" + UserControl2.dimensions.Width + "\r\n";
-                OrderText.Text += "Profondeur\t\t" + UserControl2.dimensions.Depth + "\r\n";
-                OrderText.Text += "Couleur des panneaux :\t" + casier.Value.Lrpanel.Color + "\r\n";
+                OrderText.Text += "Height :\t\t" + casier.Value.Lrpanel.Height + "\r\n";
+                OrderText.Text += "Width :\t\t" + UserControl2.dimensions.Width + "\r\n";
+                OrderText.Text += "Depth\t\t" + UserControl2.dimensions.Depth + "\r\n";
+                OrderText.Text += "Panel's color :\t" + casier.Value.Lrpanel.Color + "\r\n";
 
                 if (casier.Value.Door != null)
                 {
-                    OrderText.Text += "Couleur de la porte :\t" + casier.Value.Door.Color + "\r\n";
+                    OrderText.Text += "Door color :\t" + casier.Value.Door.Color + "\r\n";
                     
                 }
                 else
                 {
-                    OrderText.Text += ("Vous n'avez pas choisi de porte pour ce casier" + "\r\n");
+                    OrderText.Text += ("You don't color for this rack" + "\r\n");
                 }
                 OrderText.Text += ("------------------------------------------------------------" + "\r\n");
 

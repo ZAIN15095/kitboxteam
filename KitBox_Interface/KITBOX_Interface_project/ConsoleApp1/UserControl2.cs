@@ -73,7 +73,7 @@ namespace ConsoleApp1
                 this.Controls.Add(new InterfaceCasier1());
             }
             else
-                MessageBox.Show("Veuillez entrez la largeur, la profondeur de votre armoire et la couleur de votre cornière", "Erreur",
+                MessageBox.Show("Please enter the width, the depth of the rack and the color of the anglebar", "Erreur",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
 
         }

@@ -175,7 +175,7 @@
             this.Controls.Add(this.Price);
             this.Controls.Add(this.Facture);
             this.Name = "InterfacePayment";
-            this.Size = new System.Drawing.Size(1000, 502);
+            this.Size = new System.Drawing.Size(1024, 512);
             this.Load += new System.EventHandler(this.InterfacePayment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Facture)).EndInit();
             this.ResumeLayout(false);

@@ -265,7 +265,7 @@
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(127, 38);
             this.Submit.TabIndex = 73;
-            this.Submit.Text = "Finaliser la commande";
+            this.Submit.Text = "Finalize the order";
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);
@@ -304,7 +304,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "InterfaceCasier6";
-            this.Size = new System.Drawing.Size(1040, 498);
+            this.Size = new System.Drawing.Size(1024, 512);
             this.Load += new System.EventHandler(this.InterfaceCasier6_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RackPictureBox)).EndInit();
             this.ResumeLayout(false);

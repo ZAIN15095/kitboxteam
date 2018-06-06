@@ -63,7 +63,8 @@
             this.Controls.Add(this.Home);
             this.Controls.Add(this.Confirm_label);
             this.Name = "InterfaceConfirm";
-            this.Size = new System.Drawing.Size(951, 501);
+            this.Size = new System.Drawing.Size(1024, 512);
+            this.Load += new System.EventHandler(this.InterfaceConfirm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

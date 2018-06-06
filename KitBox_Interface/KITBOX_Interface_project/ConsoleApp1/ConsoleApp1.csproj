@@ -149,6 +149,12 @@
     <Compile Include="InterfaceConfirm.Designer.cs">
       <DependentUpon>InterfaceConfirm.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceConfirmDeposit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceConfirmDeposit.Designer.cs">
+      <DependentUpon>InterfaceConfirmDeposit.cs</DependentUpon>
+    </Compile>
     <Compile Include="InterfaceManager.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -160,6 +166,12 @@
     </Compile>
     <Compile Include="InterfacePayment.Designer.cs">
       <DependentUpon>InterfacePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InterfaceRegisterClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceRegisterClient.Designer.cs">
+      <DependentUpon>InterfaceRegisterClient.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfaceSearchOrder.cs">
       <SubType>UserControl</SubType>
@@ -253,11 +265,17 @@
     <EmbeddedResource Include="InterfaceConfirm.resx">
       <DependentUpon>InterfaceConfirm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceConfirmDeposit.resx">
+      <DependentUpon>InterfaceConfirmDeposit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InterfaceManager.resx">
       <DependentUpon>InterfaceManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfacePayment.resx">
       <DependentUpon>InterfacePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceRegisterClient.resx">
+      <DependentUpon>InterfaceRegisterClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceSearchOrder.resx">
       <DependentUpon>InterfaceSearchOrder.cs</DependentUpon>

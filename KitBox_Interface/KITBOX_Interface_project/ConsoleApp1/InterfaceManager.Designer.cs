@@ -30,6 +30,7 @@
         {
             this.FoundOrder = new System.Windows.Forms.Button();
             this.Stock = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FoundOrder
@@ -41,6 +42,7 @@
             this.FoundOrder.TabIndex = 0;
             this.FoundOrder.Text = "FOUND AN ORDER";
             this.FoundOrder.UseVisualStyleBackColor = true;
+            this.FoundOrder.Click += new System.EventHandler(this.FoundOrder_Click);
             // 
             // Stock
             // 
@@ -51,16 +53,29 @@
             this.Stock.TabIndex = 1;
             this.Stock.Text = "STOCK";
             this.Stock.UseVisualStyleBackColor = true;
+            this.Stock.Click += new System.EventHandler(this.Stock_Click);
+            // 
+            // button1
+            // 
+            this.button1.Image = global::ConsoleApp1.Properties.Resources.Cancel_48px;
+            this.button1.Location = new System.Drawing.Point(819, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 62);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // InterfaceManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.Stock);
             this.Controls.Add(this.FoundOrder);
             this.Name = "InterfaceManager";
-            this.Size = new System.Drawing.Size(946, 501);
+            this.Size = new System.Drawing.Size(1024, 512);
+            this.Load += new System.EventHandler(this.InterfaceManager_Load);
             this.ResumeLayout(false);
 
         }
@@ -69,5 +84,6 @@
 
         private System.Windows.Forms.Button FoundOrder;
         private System.Windows.Forms.Button Stock;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -266,7 +266,7 @@
             this.Submit.Name = "Submit";
             this.Submit.Size = new System.Drawing.Size(128, 38);
             this.Submit.TabIndex = 73;
-            this.Submit.Text = "Finaliser la commande";
+            this.Submit.Text = "Finalize the order";
             this.Submit.Theme = ManiXButton.Theme.MSOffice2010_BLUE;
             this.Submit.UseVisualStyleBackColor = true;
             this.Submit.Click += new System.EventHandler(this.Submit_Click);

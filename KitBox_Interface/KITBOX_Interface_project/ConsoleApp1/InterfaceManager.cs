@@ -16,5 +16,30 @@ namespace ConsoleApp1
         {
             InitializeComponent();
         }
+
+        private void Stock_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FoundOrder_Click(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfaceSearchOrder());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            UserControl2.command.Clear();
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new Home());
+        }
+
+        private void InterfaceManager_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
