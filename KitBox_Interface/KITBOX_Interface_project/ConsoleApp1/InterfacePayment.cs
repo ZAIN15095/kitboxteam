@@ -15,9 +15,10 @@ namespace ConsoleApp1
     public partial class InterfacePayment : UserControl
     {
         int i;
+        AngleBar anglebar = new AngleBar(UserControl2.color_Angle, UserControl2.dimensions);
         bool available;
         List<string> list = new List<string>();
-        // double price_anglebar = 0;
+        int H_angleBar;
         public static double total_price = 0;
         Broker broker = new Broker();
 
@@ -32,6 +33,8 @@ namespace ConsoleApp1
 
             foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
             {
+                H_angleBar += casier.Value.Lrpanel.Height;
+
                 //invoice
                 i = Facture.Rows.Add();
                 Facture.Rows[i].Cells[0].Value = casier.Key;
@@ -103,35 +106,26 @@ namespace ConsoleApp1
                     Facture.Rows[i].Cells[2].Value = Convert.ToString(Convert.ToDouble(broker.printPrice(casier.Value.Door, "Porte")) * 2);
                     Facture.Rows[i].Cells[3].Value = broker.Available(casier.Value.Door, "Porte");
                     total_price += Convert.ToDouble(broker.printPrice(casier.Value.Door, "Porte")) * 2;
-                    list.Add(broker.Available(casier.Value.BAttens, "Porte"));
+                    list.Add(broker.Available(casier.Value.Door, "Porte"));
                 }
-
-                //check if items is available 
-                /*if (new[] { broker.Available(casier.Value.Lrpanel, "PanneauGD"), broker.Available(casier.Value.Lrpanel, "PanneauAR"),
-                    broker.Available(casier.Value.Udpanel, "PanneauHB"), broker.Available(casier.Value.Bcrossbar, "TraverseAr"),
-                    broker.Available(casier.Value.Fcrossbar, "TraverseAv"), broker.Available(casier.Value.Lrcrossbar, "TraverseGD"),
-                    broker.Available(casier.Value.BAttens, "Tasseau") }.Any(x => x == "NON"))
-                {
-                    available = false;
-                }*/
-
-                //price_anglebar += Convert.ToDouble(broker.printPrice(casier.Value.Anglebar, "Corniere")) * 4;
             }
+
+            //insert anglebar in invoice
+            AngleBar.H_angle = H_angleBar;
+            i = Facture.Rows.Add();
+            Facture.Rows[i].Cells[0].Value = anglebar.Name;
+            Facture.Rows[i].Cells[1].Value = broker.printPrice(anglebar, "Corniere");
+            Facture.Rows[i].Cells[2].Value = Convert.ToString(Convert.ToDouble(broker.printPrice(anglebar, "Corniere")) * 4);
+            Facture.Rows[i].Cells[3].Value = broker.Available(anglebar, "Corniere");
+            total_price += Convert.ToDouble(broker.printPrice(anglebar, "Corniere")) * 4;
+            list.Add(broker.Available(anglebar, "Corniere"));
 
             if (check(list) == false)//if no stock
             {
                 label2.Visible = true;
             }
 
-            /*i = Facture.Rows.Add();
-            Facture.Rows[i].Cells[0].Value = "Cornière";
-            i = Facture.Rows.Add();
-            //Facture.Rows[i].Cells[1].Value = ;
-            i = Facture.Rows.Add();
-            Facture.Rows[i].Cells[0].Value = "Cornière";
-            i = Facture.Rows.Add();
-            Facture.Rows[i].Cells[0].Value = "Cornière";*/
-            Price_total.Text = Convert.ToString(total_price);
+            Price_total.Text = Convert.ToString(total_price);// total price
         }
 
 
@@ -151,6 +145,7 @@ namespace ConsoleApp1
 
             else
             {
+                total_price = 0;
                 broker.deleteItems(); //delete items in database
                 UserControl2.command.Clear();
                 this.BackgroundImage = null;
@@ -190,6 +185,7 @@ namespace ConsoleApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            total_price = 0;
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new InterfaceCommande());
@@ -202,6 +198,7 @@ namespace ConsoleApp1
 
         private void Cancel_Click_2(object sender, EventArgs e)
         {
+            total_price = 0;
             UserControl2.command.Clear();
             this.BackgroundImage = null;
             this.Controls.Clear();

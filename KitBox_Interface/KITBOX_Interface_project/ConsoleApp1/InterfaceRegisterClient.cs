@@ -55,6 +55,7 @@ namespace ConsoleApp1
 
                         broker.Insert(nom.Text, phone.Text, email.Text, accompte, elements);
 
+                        InterfacePayment.total_price = 0;
                         this.BackgroundImage = null;
                         this.Controls.Clear();
                         this.Controls.Add(new InterfaceConfirmDeposit());
@@ -80,6 +81,7 @@ namespace ConsoleApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
+            InterfacePayment.total_price = 0;
             UserControl2.command.Clear();
             this.BackgroundImage = null;
             this.Controls.Clear();

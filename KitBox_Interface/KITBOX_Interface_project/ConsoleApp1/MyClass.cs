@@ -57,7 +57,7 @@ namespace KITBOX_project
 	//Abstract class item used to create all others item.
 	public abstract class Item
 	{
-		
+        
 		protected string color;
         protected Dimensions dimensions;
 
@@ -403,6 +403,8 @@ namespace KITBOX_project
 
 	public class AngleBar : Item
 	{
+        public static int H_angle = 0;
+        string code;
         private static readonly String name = "Corniere";
 
         public AngleBar(string color, Dimensions dimensions) : base(color, dimensions)
@@ -415,6 +417,34 @@ namespace KITBOX_project
         public String Name
         {
             get { return name; }
+        }
+
+        public override string Code()
+        {
+            if (color == "Brun")
+            {
+                code = "'COR" + H_angle + UserControl2.color_Angle + "BR'";
+            }
+
+            if (color == "Verre")
+            {
+                code = "'COR" + H_angle + UserControl2.color_Angle + "VE'";
+            }
+            if (color == "Blanc")
+            {
+                code = "'COR" + H_angle + UserControl2.color_Angle + "BL'";
+            }
+
+            if (color == "Galvanisé")
+            {
+                code = "'COR" + H_angle + UserControl2.color_Angle + "GL'";
+            }
+            if (color == "Noir")
+            {
+                code = "'COR" + H_angle + UserControl2.color_Angle + "NR'";
+            }
+
+            return code;
         }
     }
 
@@ -536,71 +566,16 @@ public class Broker
         connectTo();
     }
 
-    /*public List<string > viewData()
-    {
-        List<string> dataList
-            = new List<string>();
-
-        try
-        {
-            command.CommandText = "SELECT * FROM Porte";
-            command.CommandType = CommandType.Text;
-            connection.Open();
-
-            OleDbDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                string code = reader["PK_Porte"].ToString() + " - "+ reader["Enstock"].ToString() + "; ";
-                dataList.Add(code);
-            }
-
-            return dataList;
-              
-        }
-
-        catch (Exception)
-        {
-            throw;
-        }
-        finally
-        {
-            if(connection != null)
-            {
-                connection.Close();
-            }
-
-        }
-    }*/
-
     // delete elements from data base
     public void deleteItems()
     {
-        switch (UserControl2.color_Angle)
-        {
-            case "Blanc":
-                UserControl2.color_Angle = "BL";
-                break;
-            case "Verre":
-                UserControl2.color_Angle = "VE";
-                break;
-            case "Brun":
-                UserControl2.color_Angle = "BR";
-                break;
-            case "Galvanisé":
-                UserControl2.color_Angle = "GL";
-                break;
-            case "Noir":
-                UserControl2.color_Angle = "NR";
-                break;
-        }
 
         int H_Angle = 0; // Height of Angle irons
         connection.Open();
 
         foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
         {
-            H_Angle += UserControl2.dimensions.Height + 4;
+            H_Angle += casier.Value.Lrpanel.Height;
 
             //delete PanelAR
             command.CommandText = "UPDATE PanneauAr SET Enstock = Enstock - 1 " +
@@ -737,7 +712,7 @@ public class Broker
                 order = reader["Commande"].ToString();
             }
 
-            if (order != null)
+            if (order != null)// order exist ? 
             {
                 return order;
             }

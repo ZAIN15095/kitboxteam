@@ -50,6 +50,7 @@ namespace ConsoleApp1
 
         private void EndButton_Click(object sender, EventArgs e)
         {
+            InterfacePayment.total_price = 0;
             UserControl2.command.Clear();
             this.BackgroundImage = null;
             this.Controls.Clear();
