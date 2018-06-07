@@ -16,7 +16,7 @@ namespace ConsoleApp1
     {
         double accompte = (InterfacePayment.total_price * 50)/100;
         Broker broker = new Broker();
-        public static string elements;
+        public static string elements; //customer's rack items
 
         public InterfaceRegisterClient()
         {
@@ -52,6 +52,7 @@ namespace ConsoleApp1
                             casier.Value.Bcrossbar.ToString() + "\r\n" + casier.Value.Fcrossbar.ToString() + "\r\n" + casier.Value.Lrcrossbar.ToString() + "\r\n" + casier.Value.BAttens.ToString() +
                             casier.Value.BAttens.ToString() + "\r\n\r\n";
                         }
+                        elements += InterfacePayment.anglebar.ToString();
 
                         broker.Insert(nom.Text, phone.Text, email.Text, accompte, elements);
 

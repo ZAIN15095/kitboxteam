@@ -39,10 +39,10 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(115, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(728, 78);
+            this.label1.Size = new System.Drawing.Size(793, 78);
             this.label1.TabIndex = 0;
-            this.label1.Text = "    Thank your, your order has been register.\r\nYou can come to take your order   " +
-    "in one week";
+            this.label1.Text = "    Thank your, your order has been register.\r\nYou can come back to take your ord" +
+    "er in one week";
             // 
             // home
             // 

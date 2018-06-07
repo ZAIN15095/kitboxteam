@@ -412,7 +412,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth : {1} - Color : {2} " , name , Height ,base.Color);
+            return string.Format("{0} - Heigth : {1} - Color : {2} " , name , AngleBar.H_angle ,base.Color);
         }
         public String Name
         {

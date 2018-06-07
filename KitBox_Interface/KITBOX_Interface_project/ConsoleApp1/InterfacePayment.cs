@@ -15,11 +15,11 @@ namespace ConsoleApp1
     public partial class InterfacePayment : UserControl
     {
         int i;
-        AngleBar anglebar = new AngleBar(UserControl2.color_Angle, UserControl2.dimensions);
+        public static AngleBar anglebar = new AngleBar(UserControl2.color_Angle, UserControl2.dimensions);
         bool available;
         List<string> list = new List<string>();
         int H_angleBar;
-        public static double total_price = 0;
+        public static double total_price;
         Broker broker = new Broker();
 
         public InterfacePayment()
@@ -29,7 +29,8 @@ namespace ConsoleApp1
 
         private void InterfacePayment_Load(object sender, EventArgs e)
         {
-            
+            total_price = 0;
+            H_angleBar = 0;
 
             foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
             {

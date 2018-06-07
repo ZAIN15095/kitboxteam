@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.Color_Angle = new System.Windows.Forms.ComboBox();
             this.Irons_color = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -226,11 +227,24 @@
             this.Irons_color.TabIndex = 27;
             this.Irons_color.Text = "Angle irons Color";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(414, 210);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(204, 48);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "N.B : All rack elements \r\n    are measured in cm";
+            // 
             // UserControl2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE_SLIDE_04_1024x5121;
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.Irons_color);
             this.Controls.Add(this.Color_Angle);
             this.Controls.Add(this.label5);
@@ -267,5 +281,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox Color_Angle;
         private System.Windows.Forms.Label Irons_color;
+        private System.Windows.Forms.Label label7;
     }
 }
