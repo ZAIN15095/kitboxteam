@@ -42,9 +42,9 @@ namespace ConsoleApp1
         {
             if(nom.Text != "" && nom.Text.Contains(" "))
             {
-                if (email.Text != "" && email.Text.Contains("@"))
+                if (email.Text != "" && email.Text.Contains("@") && email.Text.Contains("."))
                 {
-                    if (phone.Text != "" && phone.Text.Contains("0"))
+                    if (phone.Text != "" && phone.Text.Contains("0") && phone.Text.Length == 10)
                     {
                         foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
                         {

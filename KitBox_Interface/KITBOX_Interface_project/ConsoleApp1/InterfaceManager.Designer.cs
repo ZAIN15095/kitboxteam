@@ -29,31 +29,19 @@
         private void InitializeComponent()
         {
             this.FoundOrder = new System.Windows.Forms.Button();
-            this.Stock = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FoundOrder
             // 
             this.FoundOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FoundOrder.Location = new System.Drawing.Point(166, 240);
+            this.FoundOrder.Location = new System.Drawing.Point(357, 232);
             this.FoundOrder.Name = "FoundOrder";
             this.FoundOrder.Size = new System.Drawing.Size(227, 131);
             this.FoundOrder.TabIndex = 0;
             this.FoundOrder.Text = "FOUND AN ORDER";
             this.FoundOrder.UseVisualStyleBackColor = true;
             this.FoundOrder.Click += new System.EventHandler(this.FoundOrder_Click);
-            // 
-            // Stock
-            // 
-            this.Stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Stock.Location = new System.Drawing.Point(619, 240);
-            this.Stock.Name = "Stock";
-            this.Stock.Size = new System.Drawing.Size(215, 131);
-            this.Stock.TabIndex = 1;
-            this.Stock.Text = "STOCK";
-            this.Stock.UseVisualStyleBackColor = true;
-            this.Stock.Click += new System.EventHandler(this.Stock_Click);
             // 
             // button1
             // 
@@ -71,7 +59,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.Stock);
             this.Controls.Add(this.FoundOrder);
             this.Name = "InterfaceManager";
             this.Size = new System.Drawing.Size(1024, 512);
@@ -83,7 +70,6 @@
         #endregion
 
         private System.Windows.Forms.Button FoundOrder;
-        private System.Windows.Forms.Button Stock;
         private System.Windows.Forms.Button button1;
     }
 }

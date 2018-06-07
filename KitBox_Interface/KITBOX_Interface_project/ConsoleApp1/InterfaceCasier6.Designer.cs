@@ -37,7 +37,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PanelColorText = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.HeigthText = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -136,19 +135,6 @@
             this.button3.TabIndex = 64;
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.EndButton_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::ConsoleApp1.Properties.Resources.Info_50px;
-            this.button2.Location = new System.Drawing.Point(833, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(49, 48);
-            this.button2.TabIndex = 63;
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // button4
             // 
@@ -295,7 +281,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PanelColorText);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.HeigthText);
             this.Controls.Add(this.label2);
@@ -321,7 +306,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox PanelColorText;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox HeigthText;
         private System.Windows.Forms.Label label2;

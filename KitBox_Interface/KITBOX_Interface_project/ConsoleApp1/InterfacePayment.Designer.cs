@@ -41,6 +41,7 @@
             this.Unit_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cancel = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Facture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,11 +163,25 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(615, 149);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(379, 30);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "                N.B : Some  items of  your racke are not in stock.\r\nYou can pay a" +
+    " deposit and come back to take your order in one week";
+            this.label2.Visible = false;
+            // 
             // InterfacePayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.label1);
@@ -198,5 +213,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Uprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Tprice;
         private System.Windows.Forms.DataGridViewTextBoxColumn Available;
+        private System.Windows.Forms.Label label2;
     }
 }

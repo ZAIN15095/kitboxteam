@@ -536,7 +536,7 @@ public class Broker
         connectTo();
     }
 
-    public List<string > viewData()
+    /*public List<string > viewData()
     {
         List<string> dataList
             = new List<string>();
@@ -571,7 +571,7 @@ public class Broker
             }
 
         }
-    }
+    }*/
 
     // delete elements from data base
     public void deleteItems()
