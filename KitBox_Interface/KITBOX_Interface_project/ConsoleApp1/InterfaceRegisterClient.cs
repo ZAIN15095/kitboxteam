@@ -54,7 +54,7 @@ namespace ConsoleApp1
                         }
                         elements += InterfacePayment.anglebar.ToString();
 
-                        broker.Insert(nom.Text, phone.Text, email.Text, accompte, elements);
+                        broker.Insert(nom.Text, phone.Text, email.Text, accompte, elements);// insert order in database
 
                         InterfacePayment.total_price = 0;
                         this.BackgroundImage = null;
