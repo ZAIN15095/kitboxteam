@@ -16,8 +16,7 @@ namespace ConsoleApp1
     {
         int i;
         public static AngleBar anglebar = new AngleBar(UserControl2.color_Angle, UserControl2.dimensions);
-        bool available;
-        List<string> list = new List<string>();
+        List<string> list = new List<string>(); // availability of each elements
         int H_angleBar;
         public static double total_price;
         Broker broker = new Broker();
@@ -121,7 +120,7 @@ namespace ConsoleApp1
             total_price += Convert.ToDouble(broker.printPrice(anglebar, "Corniere")) * 4;
             list.Add(broker.Available(anglebar, "Corniere"));
 
-            if (check(list) == false)//if no stock
+            if (list.Contains("No"))//if no stock
             {
                 label2.Visible = true;
             }
@@ -137,7 +136,7 @@ namespace ConsoleApp1
 
         private void Pay_Click(object sender, EventArgs e)
         {
-            if ( check(list) == false)//if no stock
+            if ( list.Contains("No")) //if no stock
             {
                 this.BackgroundImage = null;
                 this.Controls.Clear();
@@ -204,24 +203,6 @@ namespace ConsoleApp1
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new Home());
-        }
-
-        //Check if all items is in stock
-        public bool check(List<string> list)
-        {
-            foreach (string elem in list)
-            {
-                if (elem == "NON")
-                {
-                    available = false;
-                    break;
-                }
-                else
-                {
-                    available = true;
-                }
-            }
-            return available;
         }
     }
 }

@@ -671,11 +671,11 @@ public class Broker
 
             if(stock > 0)
             {
-                available = "OUI";
+                available = "Yes";
             }
             else
             {
-                available = "NON";
+                available = "No";
             }
 
         }
