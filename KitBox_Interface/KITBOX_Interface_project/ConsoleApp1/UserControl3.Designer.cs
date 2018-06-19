@@ -156,11 +156,11 @@
             this.MdpI.BackColor = System.Drawing.Color.Transparent;
             this.MdpI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MdpI.ForeColor = System.Drawing.Color.Red;
-            this.MdpI.Location = new System.Drawing.Point(294, 320);
+            this.MdpI.Location = new System.Drawing.Point(355, 320);
             this.MdpI.Name = "MdpI";
-            this.MdpI.Size = new System.Drawing.Size(144, 16);
+            this.MdpI.Size = new System.Drawing.Size(109, 16);
             this.MdpI.TabIndex = 22;
-            this.MdpI.Text = "Mot de passe incorrect";
+            this.MdpI.Text = "invalid password";
             this.MdpI.Visible = false;
             // 
             // LoginI
@@ -168,11 +168,11 @@
             this.LoginI.AutoSize = true;
             this.LoginI.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginI.ForeColor = System.Drawing.Color.Red;
-            this.LoginI.Location = new System.Drawing.Point(340, 205);
+            this.LoginI.Location = new System.Drawing.Point(372, 205);
             this.LoginI.Name = "LoginI";
-            this.LoginI.Size = new System.Drawing.Size(124, 16);
+            this.LoginI.Size = new System.Drawing.Size(92, 16);
             this.LoginI.TabIndex = 23;
-            this.LoginI.Text = "Magasinier inconnu";
+            this.LoginI.Text = "invalid UserID";
             this.LoginI.Visible = false;
             // 
             // UserControl3

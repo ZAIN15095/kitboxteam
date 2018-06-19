@@ -3,6 +3,7 @@ using KITBOX_project;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
+using System.IO;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,10 @@ namespace ConsoleApp1
 {
     public partial class InterfaceRegisterClient : UserControl
     {
-        double accompte = (InterfacePayment.total_price * 50)/100;
+        Random nr = new Random();
+        double accompte = (InterfacePayment.total_price * 50)/100; //deposit price
         Broker broker = new Broker();
-        public static string elements; //customer's rack items
+        public string elements; //customer's rack items
 
         public InterfaceRegisterClient()
         {
@@ -35,17 +37,21 @@ namespace ConsoleApp1
 
         private void InterfaceRegisterClient_Load(object sender, EventArgs e)
         {
-            deposit.Text = Convert.ToString(accompte);
+            deposit.Text = Convert.ToString(accompte); //display deposit price
         }
 
         private void Accompte_Click(object sender, EventArgs e)
         {
-            if(nom.Text != "" && nom.Text.Contains(" "))
+            string random = Convert.ToString(nr.Next(100000000, 999999999));
+
+            if (nom.Text != "" && nom.Text.Contains(" "))
             {
                 if (email.Text != "" && email.Text.Contains("@") && email.Text.Contains("."))
                 {
-                    if (phone.Text != "" && phone.Text.Contains("0") && phone.Text.Length == 10)
+                    if (phone.Text != "" && phone.Text.Contains("0") && phone.Text.Length == 10) 
                     {
+                        elements += "---------------" + DateTime.Now + "---------------\r\n\r\n";
+                        elements += "Order number : " + random + "\r\n\r\n";
                         foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
                         {
                             elements += casier.Key + "\r\n\r\n" + casier.Value.Lrpanel.ToString() + "\r\n" + casier.Value.Backpanel.ToString() + "\r\n" + casier.Value.Udpanel.ToString() + "\r\n" +
@@ -54,7 +60,17 @@ namespace ConsoleApp1
                         }
                         elements += InterfacePayment.anglebar.ToString();
 
-                        broker.Insert(nom.Text, phone.Text, email.Text, accompte, elements);// insert order in database
+                        elements += "\r\n\r\nPrice : " + accompte + " euros";
+
+                        broker.Insert(random, nom.Text, phone.Text, email.Text, accompte, elements, "No");// insert order in database
+
+                        File.WriteAllText(@"C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\" + random + ".txt", elements); // invoice
+
+                        // all invoices of all clients
+                        using (StreamWriter file = new StreamWriter(@"C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Invoices.txt", true))
+                        {
+                            file.WriteLine(elements);
+                        }
 
                         InterfacePayment.total_price = 0;
                         this.BackgroundImage = null;

@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Broker.cs" />
     <Compile Include="ColorTable.cs" />
     <Compile Include="DATABASE.cs" />
     <Compile Include="Form1.cs">
@@ -179,6 +180,12 @@
     <Compile Include="InterfaceSearchOrder.Designer.cs">
       <DependentUpon>InterfaceSearchOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="InterfaceStock.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="InterfaceStock.Designer.cs">
+      <DependentUpon>InterfaceStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="MyClass.cs" />
     <Compile Include="Program.cs" />
@@ -279,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="InterfaceSearchOrder.resx">
       <DependentUpon>InterfaceSearchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InterfaceStock.resx">
+      <DependentUpon>InterfaceStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

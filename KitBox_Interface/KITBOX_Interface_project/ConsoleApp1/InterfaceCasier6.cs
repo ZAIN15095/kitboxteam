@@ -41,6 +41,7 @@ namespace ConsoleApp1
 
         private void BackButton_Click(object sender, EventArgs e)
         {
+            UserControl2.command.Remove("RACK 5");
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new InterfaceCasier5());
@@ -122,7 +123,7 @@ namespace ConsoleApp1
 
                     if (!doorColor.Equals(""))
                     {
-                        UserControl2.command.Add("CASIER 6", rack);
+                        UserControl2.command.Add("RACK 6", rack);
 
                         this.BackgroundImage = null;
                         this.Controls.Clear();
@@ -138,7 +139,7 @@ namespace ConsoleApp1
                 {
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    UserControl2.command.Add("CASIER 6", rack);
+                    UserControl2.command.Add("RACK 6", rack);
 
                     this.BackgroundImage = null;
                     this.Controls.Clear();
@@ -169,7 +170,7 @@ namespace ConsoleApp1
 
                     if (!doorColor.Equals(""))
                     {
-                        UserControl2.command.Add("CASIER 6", rack);
+                        UserControl2.command.Add("RACK 6", rack);
 
                         this.BackgroundImage = null;
                         this.Controls.Clear();
@@ -186,7 +187,7 @@ namespace ConsoleApp1
                 {
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    UserControl2.command.Add("CASIER 6", rack);
+                    UserControl2.command.Add("RACK 6", rack);
 
                     this.BackgroundImage = null;
                     this.Controls.Clear();

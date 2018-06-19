@@ -30,16 +30,17 @@
         {
             this.FoundOrder = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.stock = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FoundOrder
             // 
             this.FoundOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FoundOrder.Location = new System.Drawing.Point(357, 232);
+            this.FoundOrder.Location = new System.Drawing.Point(578, 232);
             this.FoundOrder.Name = "FoundOrder";
             this.FoundOrder.Size = new System.Drawing.Size(227, 131);
             this.FoundOrder.TabIndex = 0;
-            this.FoundOrder.Text = "FOUND AN ORDER";
+            this.FoundOrder.Text = "FIND AN ORDER";
             this.FoundOrder.UseVisualStyleBackColor = true;
             this.FoundOrder.Click += new System.EventHandler(this.FoundOrder_Click);
             // 
@@ -53,11 +54,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // stock
+            // 
+            this.stock.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stock.Location = new System.Drawing.Point(137, 232);
+            this.stock.Name = "stock";
+            this.stock.Size = new System.Drawing.Size(243, 131);
+            this.stock.TabIndex = 3;
+            this.stock.Text = "CHECK STOCK";
+            this.stock.UseVisualStyleBackColor = true;
+            this.stock.Click += new System.EventHandler(this.stock_Click_1);
+            // 
             // InterfaceManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ConsoleApp1.Properties.Resources.KEWLOX_HOMEPAGE;
+            this.Controls.Add(this.stock);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.FoundOrder);
             this.Name = "InterfaceManager";
@@ -71,5 +84,6 @@
 
         private System.Windows.Forms.Button FoundOrder;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button stock;
     }
 }

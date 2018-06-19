@@ -2,6 +2,7 @@
 using KITBOX_project;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Drawing;
 using System.Data;
 using System.Linq;
@@ -14,11 +15,13 @@ namespace ConsoleApp1
 {
     public partial class InterfacePayment : UserControl
     {
+        Random nr = new Random(); //number of order
+        public string elements; //customer's rack items
         int i;
         public static AngleBar anglebar = new AngleBar(UserControl2.color_Angle, UserControl2.dimensions);
         List<string> list = new List<string>(); // availability of each elements
         int H_angleBar;
-        public static double total_price;
+        public static double total_price; // price of order
         Broker broker = new Broker();
 
         public InterfacePayment()
@@ -123,6 +126,7 @@ namespace ConsoleApp1
             if (list.Contains("No"))//if no stock
             {
                 label2.Visible = true;
+                Pay.Text = "PAY DEPOSIT";
             }
 
             Price_total.Text = Convert.ToString(total_price);// total price
@@ -136,6 +140,8 @@ namespace ConsoleApp1
 
         private void Pay_Click(object sender, EventArgs e)
         {
+            string random = Convert.ToString(nr.Next(100000000, 999999999));
+
             if ( list.Contains("No")) //if no stock
             {
                 this.BackgroundImage = null;
@@ -143,8 +149,30 @@ namespace ConsoleApp1
                 this.Controls.Add(new InterfaceRegisterClient());
             }
 
-            else
+            else // if all items are in stock
             {
+                elements += "-----------------------" + DateTime.Now + "-----------------------\r\n\r\n";
+                elements += "Order number : " + random + "\r\n\r\n";
+                foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
+                {
+                    elements += casier.Key + "\r\n\r\n" + casier.Value.Lrpanel.ToString() + "\r\n" + casier.Value.Backpanel.ToString() + "\r\n" + casier.Value.Udpanel.ToString() + "\r\n" +
+                    casier.Value.Bcrossbar.ToString() + "\r\n" + casier.Value.Fcrossbar.ToString() + "\r\n" + casier.Value.Lrcrossbar.ToString() + "\r\n" + casier.Value.BAttens.ToString() +
+                    casier.Value.BAttens.ToString() + "\r\n\r\n";
+                }
+                elements += anglebar.ToString();
+
+                elements += "\r\n\r\nPrice : " + total_price + " euros";
+
+                broker.Insert(random, null, null, null, total_price, elements, "Yes");// insert order in database
+                
+                File.WriteAllText(@"C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\" + random + ".txt", elements); //client's invoice
+
+                // all invoices of all clients
+                using (StreamWriter file = new StreamWriter(@"C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\Invoices.txt", true))
+                {   
+                    file.WriteLine(elements);
+                }
+
                 total_price = 0;
                 broker.deleteItems(); //delete items in database
                 UserControl2.command.Clear();
@@ -203,6 +231,11 @@ namespace ConsoleApp1
             this.BackgroundImage = null;
             this.Controls.Clear();
             this.Controls.Add(new Home());
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

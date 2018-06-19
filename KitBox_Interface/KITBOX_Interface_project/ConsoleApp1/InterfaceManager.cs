@@ -41,5 +41,12 @@ namespace ConsoleApp1
         {
 
         }
+
+        private void stock_Click_1(object sender, EventArgs e)
+        {
+            this.BackgroundImage = null;
+            this.Controls.Clear();
+            this.Controls.Add(new InterfaceStock());
+        }
     }
 }

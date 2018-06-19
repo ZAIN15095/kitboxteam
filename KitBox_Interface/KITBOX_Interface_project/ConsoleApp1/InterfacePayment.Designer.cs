@@ -175,6 +175,7 @@
             this.label2.Text = "                N.B : Some  items of  your racke are not in stock.\r\nYou can pay a" +
     " deposit and come back to take your order in one week";
             this.label2.Visible = false;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // InterfacePayment
             // 

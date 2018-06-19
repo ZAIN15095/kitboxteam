@@ -257,3 +257,4 @@ C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxte
 C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_Interface\KITBOX_Interface_project\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceSearchOrder.resources
 C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_Interface\KITBOX_Interface_project\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceConfirmDeposit.resources
 C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_Interface\KITBOX_Interface_project\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceRegisterClient.resources
+C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_Interface\KITBOX_Interface_project\ConsoleApp1\obj\Debug\ConsoleApp1.InterfaceStock.resources

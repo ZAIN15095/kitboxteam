@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.OleDb;
-using KITBOX_project;
 using ConsoleApp1;
 using System.ComponentModel;
 using System.Drawing;
@@ -14,8 +10,8 @@ using System.Windows.Forms;
 
 namespace KITBOX_project
 {
-	//Class Dimensions used for all item dimension.
-	public class Dimensions
+    //Class Dimensions used for all item dimension.
+    public class Dimensions
 	{
 		private int height;
 		private int width;
@@ -60,8 +56,6 @@ namespace KITBOX_project
         
 		protected string color;
         protected Dimensions dimensions;
-
-
 
 
         public Item(string color, Dimensions dimensions)
@@ -114,7 +108,7 @@ namespace KITBOX_project
     {
         string code;
         int height;
-        private static readonly String name = "Tasseaux";
+        private static readonly String name = "Battens";
 
         public Battens(int height, Dimensions dimensions, string color = null) : base(color, dimensions)
         { this.height = height; }
@@ -160,7 +154,7 @@ namespace KITBOX_project
 	{
         string code;
         int height;
-        private static readonly String name = "Panneaux Gauche/Droite";
+        private static readonly String name = "Left/right panel";
 
         public LRpanel(int height, string color, Dimensions dimensions) : base(color, dimensions)
         { this.height = height; }
@@ -179,7 +173,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth : {1} - Width : {2} - Color : {3} ", Name, height, dimensions.Width, base.color);
+            return string.Format("{0} - Height : {1} - Width : {2} - Color : {3} ", Name, height, dimensions.Width, base.color);
         }
         public String Name
         {
@@ -204,7 +198,7 @@ namespace KITBOX_project
     public class UDpanel : Item
 	{
         string code;
-        private static readonly String name = "Panneaux Haut/Bas";
+        private static readonly String name = "Up/down panel";
 
         public UDpanel(string color , Dimensions dimensions) : base(color , dimensions)
         { }
@@ -239,14 +233,14 @@ namespace KITBOX_project
     {
         string code;
         int height;
-        private static readonly String name = "Panneau Arrière";
+        private static readonly String name = "Back panel";
 
         public BackPanel(int height, string color, Dimensions dimensions) : base(color , dimensions)
         { this.height = height; }
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth : {1} - Width : {2} - Color : {3}", name ,height , dimensions.Width, base.Color );
+            return string.Format("{0} - Height : {1} - Width : {2} - Color : {3}", name ,height , dimensions.Width, base.Color );
         }
         public String Name
         {
@@ -278,7 +272,7 @@ namespace KITBOX_project
 
     public class BCrossbar : Item
     {
-        private static readonly String name = "Traverse Arrière";
+        private static readonly String name = "Back crossbar";
 
         public BCrossbar(Dimensions dimensions,string color = null) : base(color, dimensions)
         { }
@@ -302,7 +296,7 @@ namespace KITBOX_project
     public class FCrossbar : Item
 
     {
-        private static readonly String name = "Traverse Avant";
+        private static readonly String name = "Front crossbar";
 
         public FCrossbar(Dimensions dimensions , string color = null) : base(color, dimensions)
         { }
@@ -326,7 +320,7 @@ namespace KITBOX_project
 
     public class LRcrossbar : Item
     {
-        private static readonly String name = "Traverse Gauche/Droite";
+        private static readonly String name = "Left/right crossbar";
 
         public LRcrossbar( Dimensions dimensions , string color = null) : base(color, dimensions)
         { }
@@ -354,7 +348,7 @@ namespace KITBOX_project
 	{
         string code;
         int height;
-        private static readonly String name = "Porte";
+        private static readonly String name = "Door";
 
         public Door(int height, string color , Dimensions dimensions) : base(color , dimensions)
         { this.height = height; }
@@ -393,7 +387,7 @@ namespace KITBOX_project
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth : {1} - Width {2} - Color : {3} ", name , height , dimensions.Width, base.Color);
+            return string.Format("{0} - Height : {1} - Width {2} - Color : {3} ", name , height , dimensions.Width, base.Color);
         }
         public String Name
         {
@@ -405,14 +399,14 @@ namespace KITBOX_project
 	{
         public static int H_angle = 0;
         string code;
-        private static readonly String name = "Corniere";
+        private static readonly String name = "Angle bar";
 
         public AngleBar(string color, Dimensions dimensions) : base(color, dimensions)
         { }
 
         public override string ToString()
         {
-            return string.Format("{0} - Heigth : {1} - Color : {2} " , name , AngleBar.H_angle ,base.Color);
+            return string.Format("{0} - Height : {1} - Color : {2} " , name , AngleBar.H_angle ,base.Color);
         }
         public String Name
         {
@@ -543,195 +537,4 @@ namespace KITBOX_project
 
 	}
 	
-}
-
-public class Broker
-{
-    OleDbConnection connection;
-    OleDbCommand command;
-    string prix_unitaire;
-    string available;
-    string order = null;
-    //Rack item;
-    private void connectTo()
-    {
-        connection = new OleDbConnection(@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\user\Desktop\Ecole\ABLODOSS\3eme\P2\projet informatique\projet\kitboxteam\KitBox_DB\KitBox_DB\KitBox_DB.mdb");
-        command = connection.CreateCommand();
-        
-
-       
-    }
-    public Broker() 
-    {
-        connectTo();
-    }
-
-    // delete elements from data base
-    public void deleteItems()
-    {
-
-        int H_Angle = 0; // Height of Angle irons
-        connection.Open();
-
-        foreach (KeyValuePair<string, Rack> casier in UserControl2.command)
-        {
-            H_Angle += casier.Value.Lrpanel.Height;
-
-            //delete PanelAR
-            command.CommandText = "UPDATE PanneauAr SET Enstock = Enstock - 1 " +
-                "WHERE code = " + casier.Value.Backpanel.Code();
-            command.ExecuteNonQuery();
-
-            // delete panelGD
-            command.CommandText = "UPDATE PanneauGD SET Enstock = Enstock - 2 " +
-                "WHERE code = " + casier.Value.Lrpanel.Code();
-            command.ExecuteNonQuery();
-
-            // delete panelHB
-            command.CommandText = "UPDATE PanneauHB SET Enstock = Enstock - 2 " +
-                "WHERE code = " + casier.Value.Udpanel.Code();
-            command.ExecuteNonQuery();
-
-            // delete CrossbarAr
-            command.CommandText = "UPDATE TraverseAr SET Enstock = Enstock - 1 " +
-                "WHERE code = " + casier.Value.Bcrossbar.Code();
-            command.ExecuteNonQuery();
-
-            // delete CrossbarAv
-            command.CommandText = "UPDATE TraverseAv SET Enstock = Enstock - 1 " +
-                "WHERE code = " + casier.Value.Fcrossbar.Code();
-            command.ExecuteNonQuery();
-
-            // delete CrossbarGD
-            command.CommandText = "UPDATE TraverseGD SET Enstock = Enstock - 2 " +
-                "WHERE code = " + casier.Value.Lrcrossbar.Code();
-            command.ExecuteNonQuery();
-
-            //delete battens
-            command.CommandText = "UPDATE Tasseau SET Enstock = Enstock - 4 " +
-            "WHERE code = " + casier.Value.BAttens.Code();
-            command.ExecuteNonQuery();
-
-            // delete doors
-            if (casier.Value.Door != null)
-            {
-                command.CommandText = "UPDATE Porte SET Enstock = Enstock - 1 " +
-                "WHERE code = " + casier.Value.Door.Code();
-                command.ExecuteNonQuery();
-            }
-        }
-
-        // delete Angle_irons
-        command.CommandText = "UPDATE Corniere SET Enstock = Enstock - 4 " +
-            "WHERE code = 'COR" + H_Angle + UserControl2.color_Angle + "'";
-        command.ExecuteNonQuery();
-
-        connection.Close();
-    }
-
-    //price of items
-    public string printPrice(KITBOX_project.Item item, string table)
-    {
-        connection.Open();
-
-        string code_item = item.Code();
-
-        command.CommandText = "SELECT * FROM " + table +
-            " WHERE code = " + code_item;
-        command.CommandType = CommandType.Text;
-
-        OleDbDataReader reader = command.ExecuteReader();
-
-        while (reader.Read())
-        {
-            prix_unitaire = reader["PrixClient"].ToString();
-        }
-        connection.Close();
-
-        return prix_unitaire;
-    }
-
-    // check Availability of items
-    public string Available(KITBOX_project.Item item, string table)
-    {
-        connection.Open();
-
-        int stock; 
-        string code_item = item.Code();
-
-        command.CommandText = "SELECT * FROM " + table +
-            " WHERE code = " + code_item;
-        command.CommandType = CommandType.Text;
-
-        OleDbDataReader reader = command.ExecuteReader();
-
-        while (reader.Read())
-        {
-            stock = Convert.ToInt32(reader["Enstock"].ToString());
-
-            if(stock > 0)
-            {
-                available = "Yes";
-            }
-            else
-            {
-                available = "No";
-            }
-
-        }
-        connection.Close();
-        return available;
-    }
-
-    // insert order no finish in the database
-    public void Insert(string name, string phone, string email, double deposit, string order)
-    {
-        connection.Open();
-
-        command.CommandText = "INSERT INTO Commande(Nom, Telephone, Email, Acompte, Commande) " +
-            "VALUES('" + name+ "', '" + phone + "', '" + email + "', '" + deposit + "', '" + order + "')";
-        command.ExecuteNonQuery();
-
-        connection.Close();
-    }
-
-    // search order
-    public string Order(string name)
-    {
-        connection.Open();
-        try
-        {
-            command.CommandText = "SELECT * FROM Commande" +
-                " WHERE Nom = '" + name + "'";
-            command.CommandType = CommandType.Text;
-
-            OleDbDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-            {
-                order = reader["Commande"].ToString();
-            }
-
-            if (order != null)// order exist ? 
-            {
-                return order;
-            }
-
-            else
-            {
-                return "No order exist for this client";
-            }
-
-        }
-
-        catch (Exception)
-        {
-            return "No order exist for this client";
-        }
-
-        finally
-        {
-            connection.Close();
-        }
-    }
 }

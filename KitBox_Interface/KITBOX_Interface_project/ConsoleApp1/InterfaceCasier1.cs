@@ -124,7 +124,7 @@ namespace ConsoleApp1
 
                     if (!doorColor.Equals(""))
                     {
-                        UserControl2.command.Add("CASIER 1", rack);
+                        UserControl2.command.Add("RACK 1", rack);
 
                         this.BackgroundImage = null;
                         this.Controls.Clear();
@@ -140,7 +140,7 @@ namespace ConsoleApp1
                 {
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    UserControl2.command.Add("CASIER 1", rack);
+                    UserControl2.command.Add("RACK 1", rack);
 
                     this.BackgroundImage = null;
                     this.Controls.Clear();
@@ -171,7 +171,7 @@ namespace ConsoleApp1
 
                     if (!doorColor.Equals(""))
                     {
-                        UserControl2.command.Add("CASIER 1", rack);
+                        UserControl2.command.Add("RACK 1", rack);
 
                         this.BackgroundImage = null;
                         this.Controls.Clear();
@@ -188,7 +188,7 @@ namespace ConsoleApp1
                 {
                     rack = new Rack(
                     battens, lrpanel, udpanel, backPanel, fcrossbar, bcrossbar, lrcrossbar, anglebar, door);
-                    UserControl2.command.Add("CASIER 1", rack);
+                    UserControl2.command.Add("RACK 1", rack);
 
                     this.BackgroundImage = null;
                     this.Controls.Clear();
